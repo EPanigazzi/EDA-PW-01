@@ -11,12 +11,17 @@
             integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
             crossorigin="anonymous"
         />
+        <link rel="icon" href="img/logo-favicon.png" type="image/png" sizes="16x16">
         <title>FAMEDIC - Servicios de salud</title>
     </head>
     <body>
         <header class="header-content">
             <section>
-                <img src="./img/logo.jpg" alt="logo-web" class="header-img" />
+                <img
+                    src="./img/logo-blanco.png"
+                    alt="logo-web"
+                    class="header-img"
+                />
                 <input
                     list="search"
                     placeholder="Ingrese la enfermedad..."
@@ -29,7 +34,6 @@
                     <option value="Influenza"></option>
                     <option value="Sarampi&oacute;n"></option>
                     <option value="Varicela"></option>
-                    <option value="Gripe"></option>
                 </datalist>
 
                 <button type="submit"><i class="fas fa-search"></i></button>
@@ -37,33 +41,20 @@
         </header>
         <main>
             <section class="slider-content">
-                <img src="./img/covid.jpg" alt="covid" />
+                <img src="./img/slider-principal.png" alt="covid" />
             </section>
-            <h2 class="pastilla-title">FAMADEIC - Servicios de salud</h2>
+            <section class="pastilla-title">
+                <h2>FAMADEIC</h2>
+                <h4>Servicios de salud integral</h4>
+            </section>
             <section class="pastillas-content">
-                <article>
-                    <figure>
-                        <img
-                            src="./img/enfermedad-icon.png"
-                            alt="enfermedad-icon"
-                            class="pastillas-img"
-                        />
-                    </figure>
-                    <div class="pastillas-link-content">
-                        <a
-                            href="listado-enfermedades.html"
-                            class="pastillas-link"
-                            >Enfermedades</a
-                        >
-                    </div>
-                </article>
                 <article>
                     <figure>
                         <a
                             href="https://www.buenosaires.gob.ar/laciudad/noticias/la-ciudad-instala-19-unidades-febriles-para-atencion-exclusiva-de-coronavirus"
                             target="_blank"
                             ><img
-                                src="./img/enfermedad-icon.png"
+                                src="./img/hospital-icon.png"
                                 alt="hospitales-icon"
                                 class="pastillas-img"
                         /></a>
@@ -79,11 +70,27 @@
                 </article>
                 <article>
                     <figure>
+                        <img
+                            src="./img/enfermedad-icon-new.png"
+                            alt="enfermedad-icon"
+                            class="pastillas-img"
+                        />
+                    </figure>
+                    <div class="pastillas-link-content">
+                        <a
+                            href="listado-enfermedades.html"
+                            class="pastillas-link"
+                            >Enfermedades</a
+                        >
+                    </div>
+                </article>
+                <article>
+                    <figure>
                         <a
                             href="https://www.argentina.gob.ar/salud/vacunas"
                             target="_blank"
                             ><img
-                                src="./img/enfermedad-icon.png"
+                                src="./img/vacuna-icon.png"
                                 alt="vacunas-icon"
                                 class="pastillas-img"
                         /></a>
