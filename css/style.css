@@ -10,7 +10,7 @@ body{
 
 /* header */
 .header-content{
-    background: rgb(146 235 55 / 84%);
+    background: rgb(11 97 204);
     padding: 20px;
 }
 
@@ -19,22 +19,21 @@ body{
     justify-content: center;
 }
 .header-content section img{
-    margin-right: 10%;
+    margin-right: 8%;
     width: 4%;
 }
 .header-content section input{
     margin-right: 1%;
     width: 70%;
     border: none;
-    opacity: .8;
+    opacity: .7;
     color: black;
     padding: 10px;
-    box-shadow: 10px 5px 10px #9d9c9c70;
 }
 .header-content section button{
     font-size: 1.3em;
     padding: 1%;
-    background: rgb(111 190 29);
+    background: rgb(30 65 109);
     border: none;
     border-radius: 10%;
     color: white;
@@ -42,7 +41,7 @@ body{
 
 /* footer */
 .footer-content{
-    background: rgb(86 152 18);
+    background: rgb(2 50 109);
     color: white;
     display: flex;
     justify-content: space-evenly;
@@ -78,5 +77,5 @@ body{
     cursor: pointer;
 }
 .footer-right figure a:hover{
-    color: rgb(197, 197, 197);
+    color: rgb(197, 181, 181);
 }
