@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="css/index.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+            integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+            crossorigin="anonymous"
+        />
+        <title>FAMEDIC - Servicios de salud</title>
+    </head>
+    <body>
+        <header class="header-content">
+            <section>
+                <img src="./img/logo.jpg" alt="logo-web" class="header-img" />
+                <input
+                    list="search"
+                    placeholder="Ingrese la enfermedad..."
+                    autofocus
+                    autocomplete="off"
+                />
+                <datalist id="search">
+                    <option value="Coronavirus"></option>
+                    <option value="Resfriado com&uacute;n"></option>
+                    <option value="Influenza"></option>
+                    <option value="Sarampi&oacute;n"></option>
+                    <option value="Varicela"></option>
+                </datalist>
+
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </section>
+        </header>
+        <main>
+            <section class="slider-content">
+                <img src="./img/covid.jpg" alt="covid" />
+            </section>
+            <h2 class="pastilla-title">FAMADEIC - Servicios de salud</h2>
+            <section class="pastillas-content">
+                <article>
+                    <figure>
+                        <img
+                            src="./img/enfermedad-icon.png"
+                            alt="enfermedad-icon"
+                            class="pastillas-img"
+                        />
+                    </figure>
+                    <div class="pastillas-link-content">
+                        <a
+                            href="listado-enfermedades.html"
+                            class="pastillas-link"
+                            >Enfermedades</a
+                        >
+                    </div>
+                </article>
+                <article>
+                    <figure>
+                        <a
+                            href="https://www.buenosaires.gob.ar/laciudad/noticias/la-ciudad-instala-19-unidades-febriles-para-atencion-exclusiva-de-coronavirus"
+                            target="_blank"
+                            ><img
+                                src="./img/enfermedad-icon.png"
+                                alt="hospitales-icon"
+                                class="pastillas-img"
+                        /></a>
+                    </figure>
+                    <div class="pastillas-link-content">
+                        <a
+                            href="https://www.buenosaires.gob.ar/laciudad/noticias/la-ciudad-instala-19-unidades-febriles-para-atencion-exclusiva-de-coronavirus"
+                            target="_blank"
+                            class="pastillas-link"
+                            >Hospitales</a
+                        >
+                    </div>
+                </article>
+                <article>
+                    <figure>
+                        <a
+                            href="https://www.argentina.gob.ar/salud/vacunas"
+                            target="_blank"
+                            ><img
+                                src="./img/enfermedad-icon.png"
+                                alt="vacunas-icon"
+                                class="pastillas-img"
+                        /></a>
+                    </figure>
+                    <div class="pastillas-link-content">
+                        <a
+                            href="https://www.argentina.gob.ar/salud/vacunas"
+                            target="_blank"
+                            class="pastillas-link"
+                            >Vacunas</a
+                        >
+                    </div>
+                </article>
+            </section>
+            <aside class="banner-tel-content">
+                <div class="banner-left">
+                    <p>Si ten&eacute;s sintomas de COVID-19</p>
+                    <h2>llam&aacute; al</h2>
+                </div>
+                <div class="banner-right">
+                    <i class="fas fa-phone-alt"><span> 148</span></i>
+                </div>
+            </aside>
+        </main>
+        <footer>
+            <section class="footer-content">
+                <article class="footer-left">
+                    <h4>Datos del Grupo:</h4>
+                    <p>Ezequiel Panigazzi - 38.695.636</p>
+                    <p>Lucas Zacarias - 00.000.000</p>
+                    <p>Julian Castro - 00.000.000</p>
+                </article>
+                <article class="footer-center">
+                    <h4>Nombre inferior</h4>
+                    <ul>
+                        <li>
+                            <a href="listado-enfermedades.html">Enfermedades</a>
+                        </li>
+                        <li><a href="#">Vacunas</a></li>
+                        <li>
+                            <a
+                                href="https://www.buenosaires.gob.ar/laciudad/noticias/la-ciudad-instala-19-unidades-febriles-para-atencion-exclusiva-de-coronavirus"
+                                target="_blank"
+                                >Hospitales</a
+                            >
+                        </li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </article>
+                <article class="footer-right">
+                    <h4>Redes Sociales:</h4>
+                    <figure>
+                        <a href="https://www.facebook.com/" target="_blank"
+                            ><i class="fab fa-facebook"></i
+                        ></a>
+                        <a href="https://www.instagram.com/" target="_blank"
+                            ><i class="fab fa-instagram"></i
+                        ></a>
+                        <a href="https://www.twitter.com/" target="_blank"
+                            ><i class="fab fa-twitter"></i
+                        ></a>
+                    </figure>
+                </article>
+            </section>
+        </footer>
+    </body>
+</html>

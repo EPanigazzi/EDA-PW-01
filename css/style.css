@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1em;
+}
+
+/* header */
+.header-content{
+    background: rgb(146 235 55 / 84%);
+    padding: 20px;
+}
+
+.header-content section{
+    display: flex;
+    justify-content: center;
+}
+.header-content section img{
+    margin-right: 10%;
+    width: 4%;
+}
+.header-content section input{
+    margin-right: 1%;
+    width: 70%;
+    border: none;
+    opacity: .8;
+    color: black;
+    padding: 10px;
+    box-shadow: 10px 5px 10px #9d9c9c70;
+}
+.header-content section button{
+    font-size: 1.3em;
+    padding: 1%;
+    background: rgb(111 190 29);
+    border: none;
+    border-radius: 10%;
+    color: white;
+}
+
+/* footer */
+.footer-content{
+    background: rgb(86 152 18);
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 40px;
+    margin-top: 50px;
+}
+
+.footer-left h4{
+    margin-bottom: 20px;
+}
+.footer-center h4{
+    margin-bottom: 20px;
+}
+.footer-content ul{
+    list-style: none;
+}
+.footer-content ul li a{
+    text-decoration: none;
+    color: white;
+}
+.footer-content ul li a:hover{
+    font-size: 1.1em;
+    font-weight: 500;
+}
+.footer-right h4{
+    margin-bottom: 20px;
+}
+.footer-right figure a{
+    text-decoration: none;
+    font-size: 2em;
+    margin-right: 10px;
+    color: white;
+    cursor: pointer;
+}
+.footer-right figure a:hover{
+    color: rgb(197, 197, 197);
+}
