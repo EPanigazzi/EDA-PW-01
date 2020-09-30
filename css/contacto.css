@@ -1,0 +1,115 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/*main*/
+
+main{
+    width: 80%;
+    margin: auto;
+}
+
+h2{
+    text-transform: uppercase;
+    font-weight: 450;
+    margin: 5px 0px;
+}
+
+/*barra navegacion*/
+
+.barra-navegacion ul{
+    display: flex;
+    justify-content: center;
+    background-color: skyblue;
+}
+
+.barra-navegacion ul li{
+    list-style: none;
+    padding: 13px;
+}
+
+.barra-navegacion ul li a{
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    color:white;   
+}
+
+.barra-navegacion ul li a:hover{
+    background-color: white;
+    color:skyblue;
+}
+
+
+/*contenido*/
+
+.contenido{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 15px 0px;
+}
+
+
+/*formulario de contacto*/
+
+.formulario-hijo-contenido div{
+    margin-bottom: 7px;
+}
+
+.formulario-hijo-contenido button{
+    margin-top: 7px;
+    background-color: lightgray;
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: 300;
+    text-align: right;
+}
+
+.formulario-hijo-contenido button:hover{
+    background-color:skyblue;
+    font-weight: bold;
+}
+
+.boton-enviar{
+    text-align: right;
+}
+
+.formulario-hijo-contenido input{
+    width: 90%;
+}
+
+
+/*datos de la empresa*/
+
+.datos-hijo-contenido ul li{
+    list-style: none;
+}
+
+.datos-hijo-contenido a{
+    text-decoration: none;
+    color:skyblue;
+}
+
+.datos-hijo-contenido a:hover{
+   color:black;
+}
+
+.datos-hijo-contenido ul li{
+    margin-bottom: 5px;
+}
+
+.telefonos{
+    text-align: left;
+    font-style: oblique;
+}
+
+
+/*ubicacion*/
+.ubicacion{
+    margin-top: 10px;
+    text-align: center;
+}
+
