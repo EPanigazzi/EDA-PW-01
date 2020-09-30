@@ -1,0 +1,172 @@
+/* detalles-enfermedad */
+main {
+    width: 80%;
+    margin: auto;
+}
+/* nav-bar */
+
+.nav-bar ul{
+    display: flex;
+    justify-content: center;
+    background: #1e416d;
+}
+.nav-bar ul li{
+    list-style: none;
+    text-transform: uppercase;
+    margin: 0px 15px;
+    padding: 15px 0px;
+}
+.nav-bar ul li a{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2em;
+    color: white;
+}
+.nav-bar ul li:hover{
+    font-weight: 700;
+    border-bottom: 6px solid white;
+}
+.nav-bar ul li a:hover{
+    color: rgb(207, 204, 204);
+}
+
+
+/* detalles-enfermedad */
+.detalles-title h1 {
+    text-align: center;
+    margin: 30px 0px;
+    font-size: 2.3rem;
+}
+.detalles-content {
+    display: flex;
+    justify-content: space-evenly;
+}
+.detalles-content p {
+    margin-left: 40px;
+}
+.detalles-content img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* form */
+.detail-subtitle {
+    text-transform: uppercase;
+    text-align: center;
+    padding: 50px 0px;
+    margin-top: 20px;
+}
+.form-content {
+    display: flex;
+    justify-content: space-evenly;
+}
+.form-left {
+    width: 51%;
+}
+.form-left h4 {
+    padding: 40px 0px 20px 0px;
+    font-size: 1.3em;
+    text-transform: uppercase;
+}
+.form-left-text {
+    font-size: 1.5em;
+}
+.form-img img {
+    width: 250px;
+    padding: 20px 40px 30px 0px;
+}
+.form-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-right form #name,
+.form-right form .countryVisited,
+.form-right form #address {
+    padding: 10px;
+    margin-top: 15px;
+    width: 100%;
+    border-radius: 5px;
+    background: #c2d5ecbd;
+    border: none;
+}
+
+.form-right form #city,
+.form-right form #dni,
+.form-right form #telefono{
+    padding: 10px;
+    margin-top: 15px;
+    width: 100%;
+    border-radius: 5px;
+    background:#c2d5ecbd;
+    border: none;
+}
+
+.form-gender span{
+    display: block;
+}
+.form-right form [type="radio"]{
+    margin-left: 8px;
+    margin-right: 4px;
+}
+
+.form-right form [type="submit"]{
+    padding: 20px;
+    margin: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: 3px solid #ef0000f7;
+    background: none;
+    color: black;
+    font-weight: 500;
+    font-size: 1.3em;
+    cursor: pointer;
+    transition: background 1s, color 1s;
+}
+.form-right form [type="submit"]:hover{
+    background:#ef0000f7;
+    color: white;
+}
+
+/* medidas de precaucion */
+.precauciones-primer-fila figure{
+    display: flex;
+    justify-content: space-between;
+}
+.precauciones-primer-fila img{
+    width: 200px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+/* hospital */
+.hospital-map-info{
+    margin: 30px 0px;
+    padding-bottom: 50px;
+}
+.hospital-datos-content h3{
+    padding: 30px 0px;
+    font-size: 1.6em;
+    text-decoration: underline;
+}
+.hospital-datos-content{
+    padding: 30px;
+    width: 40%;
+    border: 3px solid #02326d;
+    border-radius: 10px;
+}
+
+.hospital-datos li{
+    list-style: none;
+    font-size: 1.7em;
+    padding: 15px 0px;
+}
+.hospital-datos li i{
+    margin-right: 20px;
+    color: #04026d;
+    font-size: 1.5em;
+}
+.hospital-map-content .hospital-map-info{
+    display: flex;
+    justify-content: space-between;
+}
