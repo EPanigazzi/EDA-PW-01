@@ -9,33 +9,6 @@ main{
     margin: auto;
 }
 
-/*menu*/
-.menu{
-    background-color: skyblue;
-}
-.menu ul{
-    display: flex;
-    justify-content: center; 
-}
-.menu li{
-    list-style: none;
-    padding: 7px 5px;
-}
-
-.menu a{
-    text-decoration: none;
-    box-sizing: border-box;
-    width: 20%;
-    margin: 5px;
-    text-transform: uppercase;
-    color: white;
-}
-
-.menu ul li a:hover{
-    background-color: white;
-    color: skyblue;
-}
-
 /*mapa*/
 main section{
     text-align: center;
