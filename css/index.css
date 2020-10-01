@@ -3,7 +3,8 @@
 .slider-content{
     display: flex;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 50px;
+    flex-wrap: wrap;
 }
 
 /* pastillas */
@@ -26,10 +27,12 @@
     align-items: center;
     height: 50vh;
     padding: 50px;
+    flex-wrap: wrap;
 }
 .pastillas-content article {
+    width: 16%;
     text-align: center;
-    padding: 40px;
+    box-sizing: border-box;
 }
 .pastillas-img{
     width: 100%;
@@ -63,6 +66,7 @@
     padding: 30px;
     margin-top: 30px;
     font-size: 1.5em;
+    flex-wrap: wrap;
 }
 .banner-left{
     font-size: 1.5em;

@@ -1,44 +1,15 @@
-*{
-    padding: 0;
-    margin: 0;
-}
-
 /*main*/
-
-main{
+main {
     width: 80%;
     margin: auto;
 }
 
 h2{
     text-transform: uppercase;
-    font-weight: 450;
-    margin: 5px 0px;
-}
-
-/*barra navegacion*/
-
-.barra-navegacion ul{
-    display: flex;
-    justify-content: center;
-    background-color: skyblue;
-}
-
-.barra-navegacion ul li{
-    list-style: none;
-    padding: 13px;
-}
-
-.barra-navegacion ul li a{
-    font-weight: bold;
-    text-decoration: none;
-    text-transform: uppercase;
-    color:white;   
-}
-
-.barra-navegacion ul li a:hover{
-    background-color: white;
-    color:skyblue;
+    margin: 30px 0px;
+    padding: 10px 0;
+    font-size: 1.6em;
+    font-weight: 600;
 }
 
 
@@ -59,6 +30,15 @@ h2{
     margin-bottom: 7px;
 }
 
+.input-100 , form textarea{
+    padding: 15px;
+    margin: 10px 0px;
+    width: 100%;
+    border-radius: 5px;
+    background: #c2d5ecbd;
+    border: none;
+}
+
 .formulario-hijo-contenido button{
     margin-top: 7px;
     background-color: lightgray;
@@ -74,12 +54,23 @@ h2{
 }
 
 .boton-enviar{
-    text-align: right;
+    padding: 20px;
+    margin: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: 3px solid #ef0000f7;
+    background: none;
+    color: black;
+    font-weight: 500;
+    font-size: 1.3em;
+    cursor: pointer;
+    transition: background 1s, color 1s;
+}
+.boton-enviar:hover{
+    background:#ef0000f7;
+    color: white;
 }
 
-.formulario-hijo-contenido input{
-    width: 90%;
-}
 
 
 /*datos de la empresa*/
@@ -91,6 +82,8 @@ h2{
 .datos-hijo-contenido a{
     text-decoration: none;
     color:skyblue;
+    font-size: 2.2em;
+    margin: 20px 30px 0px 0px;
 }
 
 .datos-hijo-contenido a:hover{
@@ -98,7 +91,9 @@ h2{
 }
 
 .datos-hijo-contenido ul li{
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    padding: 5px 0;
+    font-size: 1.2em;
 }
 
 .telefonos{

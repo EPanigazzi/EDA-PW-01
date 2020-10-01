@@ -39,6 +39,37 @@ body{
     color: white;
 }
 
+/* nav-bar */
+.nav-bar ul{
+    display: flex;
+    justify-content: center;
+    background: #1e416d;
+    flex-wrap: wrap;
+}
+.nav-bar ul li{
+    list-style: none;
+    text-transform: uppercase;
+    width: 12%;
+    padding: 15px 0px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.nav-bar ul li a{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2em;
+    color: white;
+    
+}
+.nav-bar ul li:hover{
+    font-weight: 700;
+    border-bottom: 6px solid white;
+}
+.nav-bar ul li a:hover{
+    color: rgb(207, 204, 204);
+}
+
+
 /* footer */
 .footer-content{
     background: rgb(2 50 109);
@@ -69,13 +100,13 @@ body{
 .footer-right h4{
     margin-bottom: 20px;
 }
-.footer-right figure a{
+.footer-right div a{
     text-decoration: none;
     font-size: 2em;
     margin-right: 10px;
     color: white;
     cursor: pointer;
 }
-.footer-right figure a:hover{
+.footer-right div a:hover{
     color: rgb(197, 181, 181);
 }
