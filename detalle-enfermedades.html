@@ -54,9 +54,17 @@
             </ul>
         </nav>
         <main>
+            <section class="btn-volver">
+                <a href="listado-enfermedades.html">
+                    <button>
+                        <i class="fas fa-arrow-left"></i>
+                        Volver a listado de enfermedades
+                    </button>
+                </a>
+            </section>
             <section class="detalles-title">
                 <h1>COVID-19</h1>
-                <figure class="detalles-content">
+                <article class="detalles-content">
                     <img src="img/covid-19.jpg" alt="covid-19" />
                     <p>
                         También conocida como enfermedad por coronavirus e
@@ -86,7 +94,7 @@
                         orales, nasales y oculares, al tocarse la boca, la nariz
                         o los ojos.
                     </p>
-                </figure>
+                </article>
             </section>
             <div class="detail-subtitle">
                 <h2>
@@ -108,7 +116,7 @@
                         descritos en 'Ver las condiciones y políticas
                     </p>
                     <h4>s&iacute;ntomas</h4>
-                    <figure class="form-img">
+                    <article class="form-img">
                         <img
                             src="img/24-fiebre-dolor-garganta.png"
                             alt="fiebre-dolor-garganta"
@@ -117,34 +125,40 @@
                             src="img/25-fiebre-dificultad-respirar.png"
                             alt="fiebre-dificultad-respirar"
                         />
-                    </figure>
-                    <figure class="form-img">
+                    </article>
+                    <article class="form-img">
                         <img src="img/23-fiebre-tos.png" alt="fiebre-tos" />
-                    </figure>
+                    </article>
                 </article>
                 <article class="form-right">
                     <form action="/detalle-enfermedades.html">
-                        <label for="name">Nombre y Apellido</label><br />
+                        <label for="name" class="form-label"
+                            >Nombre y Apellido</label
+                        ><br />
                         <input
                             type="text"
                             id="name"
                             name="name"
                             required
                             autocomplete="off"
+                            class="input-100"
                         /><br /><br />
                         <div class="form-group">
                             <div>
-                                <label for="dni">DNI</label><br />
+                                <label for="dni" class="form-label">DNI</label
+                                ><br />
                                 <input
                                     type="number"
                                     id="dni"
                                     name="dni"
                                     required
                                     autocomplete="off"
+                                    class="input-50"
                                 /><br />
                             </div>
                             <div>
-                                <label for="telefono">Tel&eacute;fono</label
+                                <label for="telefono" class="form-label"
+                                    >Tel&eacute;fono</label
                                 ><br />
                                 <input
                                     type="number"
@@ -152,6 +166,7 @@
                                     name="telefono"
                                     required
                                     autocomplete="off"
+                                    class="input-50"
                                 />
                                 <br /><br />
                             </div>
@@ -159,17 +174,20 @@
 
                         <div class="form-group">
                             <div>
-                                <label for="city">Ciudad</label><br />
+                                <label for="city" class="form-label"
+                                    >Ciudad</label
+                                ><br />
                                 <input
                                     type="text"
                                     id="city"
                                     name="city"
                                     required
                                     autocomplete="off"
+                                    class="input-50"
                                 />
                             </div>
                             <div class="form-gender">
-                                <span>Sexo</span>
+                                <span class="form-label">Sexo</span>
                                 <br />
                                 <input
                                     type="radio"
@@ -195,7 +213,7 @@
                                 <label for="other">Otro</label>
                             </div>
                         </div>
-                        <br />
+                        <br /><br />
                         <span
                             >¿Has viajado al exterior de la Rep&uacute;blica
                             Argentina?</span
@@ -214,15 +232,15 @@
                             value="false"
                         />
                         <label for="travellFalse">No</label><br /><br />
-
-                        <label for="countryVisited"
+                        <br />
+                        <label for="countryVisited" class="form-label"
                             >Pa&iacute;ses visitados</label
                         >
                         <input
                             list="countryVisited"
                             autofocus
                             autocomplete="off"
-                            class="countryVisited"
+                            class="input-100"
                             required
                         />
                         <datalist id="countryVisited">
@@ -231,9 +249,12 @@
                             <option value="Uruguay"></option>
                             <option value="Bolivia"></option>
                             <option value="Paraguay"></option>
-                            <option value="Otros"></option></datalist
-                        ><br /><br />
-                        <p>Por favor, indica los sintomas que presentas:</p>
+                            <option value="Otros"></option>
+                        </datalist>
+
+                        <p class="text-form">
+                            Por favor, indica los sintomas que presentas:
+                        </p>
                         <br />
                         <span>¿Tuviste fiebre mayor a 38 grados?</span>
                         <input
@@ -314,18 +335,25 @@
                             value="false"
                         />
                         <label for="dificultadRespirarFalse">No</label
-                        ><br /><br />
+                        ><br /><br /><br />
 
-                        <label for="address">Direccion</label><br />
+                        <label for="address" class="form-label"
+                            >Direcci&oacute;n</label
+                        ><br />
                         <input
                             type="text"
                             id="address"
                             name="address"
                             required
                             autocomplete="off"
+                            class="input-100"
                         /><br /><br />
 
-                        <input type="submit" value="ENVIAR TEST" />
+                        <input
+                            type="submit"
+                            class="boton-enviar"
+                            value="ENVIAR TEST"
+                        />
                     </form>
                 </article>
             </section>
@@ -334,7 +362,7 @@
                     <h2>medidas de precauci&oacute;n</h2>
                 </article>
                 <article class="precauciones-primer-fila">
-                    <figure>
+                    <div>
                         <img
                             src="./img/14-lavarse-manos.png"
                             alt="lavarse-manos"
@@ -348,8 +376,8 @@
                             src="./img/17-ventilar.png"
                             alt="ventilar-ambientes-cerrados"
                         />
-                    </figure>
-                    <figure>
+                    </div>
+                    <div>
                         <img
                             src="./img/18-limpiar-objetos.png"
                             alt="limpiar-objetos"
@@ -366,7 +394,7 @@
                             src="./img/21-no-compartir-mate.png"
                             alt="no-compartir-mate"
                         />
-                    </figure>
+                    </div>
                 </article>
             </section>
             <section class="hospital-map-content">
@@ -380,9 +408,17 @@
                     <div class="hospital-datos-content">
                         <h3>HOSPITAL PIROVANO</h3>
                         <ul class="hospital-datos">
-                            <li><i class="fas fa-phone-square-alt"></i> +54-114546-4300</li>
-                            <li><i class="fas fa-map-marker-alt"></i> Av. Monroe 3555, CABA</li>
-                            <li><i class="fas fa-city"></i> Buenos Aires, CABA</li>
+                            <li>
+                                <i class="fas fa-phone-square-alt"></i>
+                                +54-114546-4300
+                            </li>
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i> Av. Monroe
+                                3555, CABA
+                            </li>
+                            <li>
+                                <i class="fas fa-city"></i> Buenos Aires, CABA
+                            </li>
                         </ul>
                     </div>
                     <div>
@@ -401,14 +437,14 @@
             </section>
         </main>
         <footer>
-            <section class="footer-content">
-                <article class="footer-left">
+            <div class="footer-content">
+                <div class="footer-left">
                     <h4>Datos del Grupo:</h4>
                     <p>Ezequiel Panigazzi - 38.695.636</p>
-                    <p>Lucas Zacarias - 00.000.000</p>
+                    <p>Lucas Zacarias - 42.436.419</p>
                     <p>Julian Castro - 00.000.000</p>
-                </article>
-                <article class="footer-center">
+                </div>
+                <div class="footer-center">
                     <h4>Nombre inferior</h4>
                     <ul>
                         <li>
@@ -416,18 +452,14 @@
                         </li>
                         <li><a href="#">Vacunas</a></li>
                         <li>
-                            <a
-                                href="https://www.buenosaires.gob.ar/laciudad/noticias/la-ciudad-instala-19-unidades-febriles-para-atencion-exclusiva-de-coronavirus"
-                                target="_blank"
-                                >Hospitales</a
-                            >
+                            <a href="mapa.html">Hospitales</a>
                         </li>
                         <li><a href="contacto.html">Contacto</a></li>
                     </ul>
-                </article>
-                <article class="footer-right">
+                </div>
+                <div class="footer-right">
                     <h4>Redes Sociales:</h4>
-                    <figure>
+                    <div>
                         <a href="https://www.facebook.com/" target="_blank"
                             ><i class="fab fa-facebook"></i
                         ></a>
@@ -437,9 +469,9 @@
                         <a href="https://www.twitter.com/" target="_blank"
                             ><i class="fab fa-twitter"></i
                         ></a>
-                    </figure>
-                </article>
-            </section>
+                    </div>
+                </div>
+            </div>
         </footer>
     </body>
 </html>
