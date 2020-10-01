@@ -10,11 +10,21 @@
     href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" 
     crossorigin="anonymous">
+    <link
+            rel="icon"
+            href="img/logo-favicon.png"
+            type="image/png"
+            sizes="16x16"
+        />
 </head>
 <body>
     <header class="header-content">
         <section>
-            <img src="img/logo-favicon.png" alt="logo-web" class="header-img" />
+            <img
+                    src="img/logo-blanco.png"
+                    alt="logo-web"
+                    class="header-img"
+                />
             <input
                 list="search"
                 placeholder="Ingrese la enfermedad..."
@@ -33,81 +43,112 @@
             <button type="submit"><i class="fas fa-search"></i></button>
         </section>
     </header>
-    <nav class="barra-navegacion">
+    <nav class="nav-bar">
         <ul>
-            <li><a href="index.html">home</a></li>
-            <li><a href="listado-enfermedades.html">enfermedades</a></li>
-            <li><a href="https://www.argentina.gob.ar/salud/vacunas" target="_blank">vacunaci&oacute;n</a></li>
-            <li><a href="mapa.html">hospitales</a></li>
-            <li><a href="contacto.html">contacto</a></li>
+            <li><a href="/index.html">HOME</a></li>
+            <li><a href="/listado-enfermedades.html">ENFERMEDADES</a></li>
+            <li><a href="#">VACUNACI&oacute;N</a></li>
+            <li><a href="/mapa.html">HOSPITALES</a></li>
+            <li><a href="/contacto.html">CONTACTO</a></li>
         </ul>
     </nav>
     <main>
         <section class="contenido">
             <article class="formulario-hijo-contenido">
                 <h2>contacto</h2>
-                <form action="#" >
+                <form action="#">
                     <div>
-                    <label for="nombre-apellido"></label>
-                    <input type="text" name="nombre-apellido" id="nombre-apellido"
-                    placeholder="Ingrese su nombre y apellido" required>
-                </div>
-                <div>   
-                    <label for="email"></label>
-                    <input type="email" placeholder="Ingrese su email" required>
-                </div>
-                <div>  
-                    <label for="telefono"></label>
-                    <input type="tel" placeholder="Ingrese su teléfono (opcional)">
-                </div>
-                <div>
-                    <label for="consulta"></label>
-                    <textarea name="mensaje" id="consulta" cols="30" rows="15" 
-                    placeholder="Escriba aquí su consulta" 
-                    required ></textarea>
-                </div>
-                <div class="boton-enviar">
-                    <button type="submit">Enviar</button>
-                </div>
+                        <label for="nombre-apellido"></label>
+                        <input
+                            type="text"
+                            name="nombre-apellido"
+                            id="nombre-apellido"
+                            placeholder="Ingrese su nombre y apellido"
+                            class="input-100"
+                            required
+                        />
+                    </div>
+                    <div>
+                        <label for="email"></label>
+                        <input
+                            type="email"
+                            placeholder="Ingrese su email"
+                            class="input-100"
+                            required
+                        />
+                    </div>
+                    <div>
+                        <label for="telefono"></label>
+                        <input
+                            type="tel"
+                            placeholder="Ingrese su teléfono (opcional)"
+                            class="input-100"
+                        />
+                    </div>
+                    <div>
+                        <label for="consulta"></label>
+                        <textarea
+                            name="mensaje"
+                            id="consulta"
+                            cols="30"
+                            rows="15"
+                            placeholder="Escriba aquí su consulta"
+                            required
+                        ></textarea>
+                    </div>
+                    <div>
+                        <input type="submit" class="boton-enviar" value="ENVIAR"></input>
+                    </div>
                 </form>
             </article>
             <article class="datos-hijo-contenido">
                 <h2>datos de contacto</h2>
-                    <ul>
-                        <li>Direcci&oacute;n: Alberdi 8942</li>
-                        <li>Tel&eacute;fonos:</li>
-                        <ul class="telefonos"><li>2345-9877</li>
-                            <li>2451-7465</li>
-                        </ul>
-                        <li>Celular: 011-4578-9603</li>
-                        <li>Email: famedic@gmail.com</li>
-                        <li>Web <figure>
-                            <a href="https://www.facebook.com/" target="_blank"
+                <ul>
+                    <li>Direcci&oacute;n: Alberdi 8942</li>
+                    <li class="telefonos">Tel&eacute;fonos:</li>
+                    <ul class="telefonos">
+                        <li>2345-9877</li>
+                        <li>2451-7465</li>
+                    </ul>
+                    <li>Celular: 011-4578-9603</li>
+                    <li>Email: famedic@gmail.com</li>
+                    <li>
+                        Web
+                        <div>
+                            <a
+                                href="https://www.facebook.com/"
+                                target="_blank"
                                 ><i class="fab fa-facebook"></i
                             ></a>
-                            <a href="https://www.instagram.com/" target="_blank"
+                            <a
+                                href="https://www.instagram.com/"
+                                target="_blank"
                                 ><i class="fab fa-instagram"></i
                             ></a>
-                            <a href="https://www.twitter.com/" target="_blank"
+                            <a
+                                href="https://www.twitter.com/"
+                                target="_blank"
                                 ><i class="fab fa-twitter"></i
                             ></a>
-                        </figure></li>
-                    </ul>    
-                
+                        </div>
+                    </li>
+                </ul>
             </article>
         </section>
         <article class="ubicacion">
             <h2>ubicaci&oacute;n</h2>
             <figure>
-             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d18837.85971248061!2d-58.487492826505516!3d-34.64581921516853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1601494854012!5m2!1ses!2sar"
-              width="600" 
-              height="450" 
-              frameborder="0" 
-              style="border:0;"
-               allowfullscreen="" 
-               aria-hidden="false" 
-               tabindex="0">
-            </iframe> 
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d18837.85971248061!2d-58.487492826505516!3d-34.64581921516853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1601494854012!5m2!1ses!2sar"
+                    width="600"
+                    height="450"
+                    frameborder="0"
+                    style="border: 0"
+                    allowfullscreen=""
+                    aria-hidden="false"
+                    tabindex="0"
+                >
+                </iframe>
             </figure>
         </article>
     </main>
