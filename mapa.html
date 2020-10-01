@@ -4,3 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAMEDIC - Mapas</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href=".//css/mapa.css">
+    <link rel="stylesheet" 
+    href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" 
+    crossorigin="anonymous">
+</head>
+<body>
+    <header class="header-content">
+        <section>
+            <img src="./img/logo-favicon.png" alt="logo-web" class="header-img" />
+            <input
+                list="search"
+                placeholder="Ingrese la enfermedad..."
+                autofocus
+                autocomplete="off"
+            />
+            <datalist id="search">
+                <option value="Coronavirus"></option>
+                <option value="Resfriado com&uacute;n"></option>
+                <option value="Influenza"></option>
+                <option value="Sarampi&oacute;n"></option>
+                <option value="Varicela"></option>
+                <option value="Gripe"></option>
+            </datalist>
+
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </section>
+    </header>
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">home</a></li>
+            <li><a href="listado-enfermedades.html">enfermedades</a></li>
+            <li><a href="https://www.argentina.gob.ar/salud/vacunas" target="_blank">vacunaci&oacute;n</a></li>
+            <li><a href="mapa.html">hospitales</a></li>
+            <li><a href="contacto.html">contacto</a></li>
+        </ul>
+    </nav> 
+    <main>
+        <section>
+            <h2>
+                mapa de hospitales disponibles
+            </h2>
+            <figure>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d69081.85573409697!2d-58.58600361747326!3d-34.66468267042572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1shospitales!5e0!3m2!1ses-419!2sar!4v1601570312777!5m2!1ses-419!2sar" 
+                width="600" 
+                height="450" 
+                frameborder="0" 
+                style="border:0;"
+                allowfullscreen="" 
+                aria-hidden="false" 
+                tabindex="0"></iframe>
+                </a>
+            </figure>
+        </section>    
+    </main>
+    <footer>
+        <section class="footer-content">
+            <article class="footer-left">
+                <h4>Datos del Grupo:</h4>
+                <p>Ezequiel Panigazzi - 38.695.636</p>
+                <p>Lucas Zacarias - 42.436.419</p>
+                <p>Julian Castro - 00.000.000</p>
+            </article>
+            <article class="footer-center">
+                <h4>Nombre inferior</h4>
+                <ul>
+                    <li>
+                        <a href="listado-enfermedades.html">Enfermedades</a>
+                    </li>
+                    <li><a href="#">Vacunas</a></li>
+                    <li>
+                        <a href="mapa.html">Hospitales</a>
+                    </li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </article>
+            <article class="footer-right">
+                <h4>Redes Sociales:</h4>
+                <figure>
+                    <a href="https://www.facebook.com/" target="_blank"
+                        ><i class="fab fa-facebook"></i
+                    ></a>
+                    <a href="https://www.instagram.com/" target="_blank"
+                       ><i class="fab fa-instagram"></i
+                    ></a>
+                    <a href="https://www.twitter.com/" target="_blank"
+                        ><i class="fab fa-twitter"></i
+                    ></a>
+                </figure>
+            </article>
+        </section>
+    </footer>
+</body>
+</html>
