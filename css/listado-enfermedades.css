@@ -1,0 +1,65 @@
+main{
+    width: 50%;
+    margin: auto;
+}
+.parrafo{
+    display: flex;
+    margin: 20px 0px 20px 0px;
+    
+}
+.imgcontenedor{
+    margin-right: 20px;
+    display: flex;
+}
+.img-enfermedad{
+    width: 320px;
+    display: flex;
+    border-radius: 20px;
+}
+
+h3{
+    display: inline-block;
+    margin-bottom: 8px;
+}
+h2{
+    text-align: center;
+    margin: 20px 0 10px 0px;
+}
+main a{
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #000;
+    padding: 6px;
+    display: inline-block;
+    margin-top: 10px;
+    border-radius: 8px;
+    background: rgb(11 97 204);
+}
+main a:hover{
+    color: rgb(11 97 204);
+    background: #fff;
+    border: 1px solid #fff;
+}
+.main-filtro{
+    display: flex;
+    justify-content:center;
+   
+}
+.main-filtro img{
+    width: 5%;
+}
+.main-filtro input{
+    width: 100%;
+    opacity: .7;
+    color: black;
+   
+}
+.main-filtro button{
+    font-size: 1.3em;
+    padding: 1%;
+    background: rgb(30 65 109);
+    border: none;
+    border-radius: 10%;
+    color: white;
+}
+

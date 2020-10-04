@@ -110,3 +110,19 @@ body{
 .footer-right div a:hover{
     color: rgb(197, 181, 181);
 }
+.arriba{
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: #7aa6eb;
+    position: fixed;
+    right: 0;
+    bottom: 10px;
+    border-radius: 50%;
+    background-image: url(../img/flecha.png);
+    background-size: cover;
+   
+}
+.arriba:hover{
+    opacity: 0.8;
+}
