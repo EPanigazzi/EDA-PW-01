@@ -1,0 +1,44 @@
+main{
+    width: 60%;
+    margin: auto;
+}
+#h2centro-de-vacunacion{
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#h2hospitales{
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-top: 2px solid #000;
+}
+.vacunas-general{
+    display: flex;
+    margin-bottom: 20px;
+}
+#img-vacunas{
+    width: 300px;
+    margin-right: 30px;
+    border-radius: 10px;
+}
+ul{
+    margin-left: 25px;
+}
+.article-mapas{
+    padding: 25px;;
+}
+
+.mapas{
+    display:flex;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 25px;      
+}
+#map{
+    width:550px; 
+    height:340px; 
+   
+}

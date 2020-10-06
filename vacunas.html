@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/vacunas.css">
+   <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+            integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+            crossorigin="anonymous"
+        />
+        <link rel="icon" href="img/logo-favicon.png" type="image/png" sizes="16x16">
+      
+    <meta charset="UTF-8">
+    <title>Listado de enfermedades</title>
+</head>
+<body>
+    <header id ="inicio" class="header-content">
+            <section>
+                <img
+                    src="./img/logo-blanco.png"
+                    alt="logo-web"
+                    class="header-img"
+                />
+                <input
+                    list="search"
+                    placeholder="Ingrese la enfermedad..."
+                    autofocus
+                    autocomplete="off"
+                />
+                <datalist id="search">
+                    <option value="Coronavirus"></option>
+                    <option value="Resfriado com&uacute;n"></option>
+                    <option value="Influenza"></option>
+                    <option value="Sarampi&oacute;n"></option>
+                    <option value="Varicela"></option>
+                </datalist>
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </section>
+            
+    </header>
+
+    <nav class="nav-bar">
+            <ul>
+                <li><a href="/index.html">HOME</a></li>
+                <li><a href="/listado-enfermedades.html">ENFERMEDADES</a></li>
+                <li><a href="#">VACUNACI&oacute;N</a></li>
+                <li><a href="/mapa.html">HOSPITALES</a></li>
+                <li><a href="/contacto.html">CONTACTO</a></li>
+            </ul>
+        </nav>
+      
+    <main>
+        <h2 id="h2centro-de-vacunacion">CENTRO DE VACUNACIÓN</h2>
+        <section class="vacunas-general">
+            <article>
+                <img id="img-vacunas" src="img/vacunas.jpg" alt="vacunas">
+            </article>
+            <article>
+                <p>
+                    Las vacunas se utilizan para reforzar el sistema inmunitario y prevenir enfermedades graves y potencialmente mortales.
+                    Las vacunas le "enseñan" al cuerpo cómo defenderse cuando microorganismos, como virus o bacterias lo invaden:
+                </p>
+                     <ul>
+                        <li>Las vacunas lo exponen a una cantidad muy pequeña y muy segura de virus o bacterias que han sido debilitados o destruidos.</li> 
+                        <li>Su sistema inmunitario aprende luego a reconocer y atacar la infección si está expuesto a ella posteriormente en su vida.</li>    
+                        <li>Como resultado de esto, usted no se enfermará o puede tener una infección más leve. Esta es una forma natural de hacerle frente a las enfermedades infecciosas.</li> 
+                     </ul>   
+              
+            </article>
+        </section>
+        <H2 id="h2hospitales">HOSPITALES CON CENRTO DE VACUNACIÓN</H2>
+
+    <section id="todos-los-mapas">
+        <section class="mapas">
+            <article class="article-mapas">
+                <h3>HOSPITAL POSADAS</h3>
+                <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.0106667005043!2d-58.5760112471877!3d-34.62917073394522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb80b7396b9af%3A0xef2dc611cc3efabb!2sPosadas!5e0!3m2!1ses-419!2sar!4v1601934091801!5m2!1ses-419!2sar" 
+                width="600" 
+                height="450" 
+                frameborder="0" 
+                style="border:0;" 
+                allowfullscreen="" 
+                aria-hidden="false" 
+                tabindex="0">
+                </iframe>
+           </article>
+           <article class="article-mapas">
+            <h3>HOSPITAL GARRAHAN</h3>
+                <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2459.406520412492!2d-58.39511860418173!3d-34.63161981229307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sgarrahan!5e0!3m2!1ses-419!2sar!4v1601934356964!5m2!1ses-419!2sar" 
+                width="600" 
+                height="450" 
+                frameborder="0" 
+                style="border:0;" 
+                allowfullscreen="" 
+                aria-hidden="false" 
+                tabindex="0">
+                </iframe>
+            </article>
+        </section>
+        <section class="mapas">
+            <article class="article-mapas">
+                <h3>HOSPITAL GÜEMES</h3>
+                <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1896.227409672846!2d-58.58109816576218!3d-34.64186275022729!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1shospital%20haedo!5e0!3m2!1ses-419!2sar!4v1601934461815!5m2!1ses-419!2sar" 
+                width="600" 
+                height="450" 
+                frameborder="0" 
+                style="border:0;" 
+                allowfullscreen="" 
+                aria-hidden="false" 
+                tabindex="0">
+                </iframe>
+            </article>
+            <article class="article-mapas">
+                <h3>HOSPITAL ITALIANO</h3>
+                <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.404219314721!2d-58.56969338423523!3d-34.669746268502884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc7cd14129b61%3A0x78f6eab9f8572beb!2sHospital%20Italiano%20de%20San%20Justo%20Agust%C3%ADn%20Rocca!5e0!3m2!1ses-419!2sar!4v1601934710683!5m2!1ses-419!2sar" 
+                width="600" 
+                height="450" 
+                frameborder="0" 
+                style="border:0;" 
+                allowfullscreen="" 
+                aria-hidden="false" 
+                tabindex="0">
+                </iframe>
+            </article>
+        </section>
+    </section>
+    <a href="#inicio" class="arriba"></a>
+    </main>
+
+
+
+
+
+
+
+    <footer>
+        <footer>
+            <section class="footer-content">
+                <article class="footer-left">
+                    <h4>Datos del Grupo:</h4>
+                    <p>Ezequiel Panigazzi - 38.695.636</p>
+                    <p>Lucas Zacarias - 00.000.000</p>
+                    <p>Julian Castro - 39.347.169</p>
+                </article>
+                <article class="footer-center">
+                    <h4>Nombre inferior</h4>
+                    <ul>
+                        <li>
+                            <a href="listado-enfermedades.html">Enfermedades</a>
+                        </li>
+                        <li><a href="#">Vacunas</a></li>
+                        <li>
+                            <a
+                                href="https://www.buenosaires.gob.ar/laciudad/noticias/la-ciudad-instala-19-unidades-febriles-para-atencion-exclusiva-de-coronavirus"
+                                target="_blank"
+                                >Hospitales</a
+                            >
+                        </li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </article>
+                <article class="footer-right">
+                    <h4>Redes Sociales:</h4>
+                    <figure>
+                        <a href="https://www.facebook.com/" target="_blank"
+                            ><i class="fab fa-facebook"></i
+                        ></a>
+                        <a href="https://www.instagram.com/" target="_blank"
+                            ><i class="fab fa-instagram"></i
+                        ></a>
+                        <a href="https://www.twitter.com/" target="_blank"
+                            ><i class="fab fa-twitter"></i
+                        ></a>
+                    </figure>
+                </article>
+            </section>
+        </footer>
+</body>
+    </footer>
