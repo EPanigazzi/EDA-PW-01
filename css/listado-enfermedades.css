@@ -43,7 +43,7 @@ h2{
     margin: 50px 0px 20px 0px;
 }
 .img-text-content article{
-    width: calc(50% - 0.2em);
+    width: calc(50% - 1em);
     box-sizing: border-box;
 }
 .img-text-content img{
