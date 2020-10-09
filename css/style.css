@@ -8,35 +8,64 @@ body {
     font-size: 1em;
 }
 
+h1{
+    font-size: 3em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+h2{
+    font-size: 2.6em;
+    text-transform: uppercase;
+}
+h3{
+    font-size: 2.3em;
+    text-transform: uppercase;
+}
+h4{
+    font-size: 2em;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+h5{
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+p{
+    font-size: 1em;
+}
+
 /* header */
 .header-content {
     background: rgb(11 97 204);
     padding: 20px;
 }
 
-.header-content section {
+.header-content div {
     display: flex;
     justify-content: center;
 }
-.header-content section img {
+.header-content div img {
     margin-right: 8%;
     width: 4%;
 }
-.header-content section input {
+.header-content div input {
     margin-right: 1%;
     width: 70%;
     border: none;
     opacity: 0.7;
     color: black;
     padding: 10px;
+    border-radius: 10px;
 }
-.header-content section button {
+.header-content div button {
     font-size: 1.3em;
     padding: 1%;
     background: rgb(30 65 109);
     border: none;
-    border-radius: 10%;
+    border-radius: 10px;
     color: white;
+    cursor: pointer;
 }
 
 /* nav-bar */
@@ -96,6 +125,8 @@ main figure iframe {
     padding: 5px 0px;
     border-radius: 20px;
     opacity: 0.3;
+    width: 100%;
+    height: 600px;
 }
 
 main figure iframe:hover {
@@ -103,6 +134,17 @@ main figure iframe:hover {
     -webkit-box-shadow: 0px 66px 100px -20px rgba(0, 0, 0, 0.56);
     -moz-box-shadow: 0px 66px 100px -20px rgba(0, 0, 0, 0.56);
     box-shadow: 0px 66px 100px -20px rgba(0, 0, 0, 0.56);
+}
+
+/* contenedor padre-hijo imagenes */
+.img-text-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.two-col{
+    width: calc(50% - 6em);
+    box-sizing: border-box;
 }
 
 
@@ -116,12 +158,10 @@ main figure iframe:hover {
     margin-top: 50px;
 }
 
-.footer-left h4 {
+.footer-title {
     margin-bottom: 20px;
 }
-.footer-center h4 {
-    margin-bottom: 20px;
-}
+
 .footer-content ul {
     list-style: none;
 }

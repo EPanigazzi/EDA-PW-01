@@ -18,16 +18,16 @@ main {
     margin-top: 30px;
     transition: background 1s, color 1s;
 }
-.btn-volver button:hover{
+.btn-volver button:hover {
     background-color: rgb(11 97 204);
     border-radius: 5px;
     color: white;
 }
-.btn-volver i{
+.btn-volver i {
     font-size: 2em;
     margin-right: 20px;
 }
-.btn-volver a{
+.btn-volver a {
     text-decoration: none;
 }
 
@@ -35,18 +35,19 @@ main {
 .detalles-title h1 {
     text-align: center;
     margin: 30px 0px;
-    font-size: 2.3rem;
 }
-.detalles-content {
+.img-text-content {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
 }
-.detalles-content p {
-    margin-left: 40px;
+.img-text-content div {
+    box-sizing: border-box;
+    width: calc(50% - 6em);
 }
-.detalles-content img {
-    width: 100%;
+.img-text-content img {
     border-radius: 10px;
+    width: 100%;
 }
 
 /* form */
@@ -58,6 +59,7 @@ main {
 }
 .form-content {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 .form-left {
@@ -65,8 +67,6 @@ main {
 }
 .form-left h4 {
     padding: 40px 0px 20px 0px;
-    font-size: 1.3em;
-    text-transform: uppercase;
 }
 .form-left-text {
     font-size: 1.5em;
@@ -77,6 +77,7 @@ main {
 }
 .form-group {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 .form-label {
@@ -126,6 +127,7 @@ main {
 /* medidas de precaucion */
 .precauciones-primer-fila div {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 .precauciones-primer-fila img {
@@ -135,20 +137,9 @@ main {
 }
 
 /* hospital */
-.hospital-map-info {
-    margin: 30px 0px;
-    padding-bottom: 50px;
-}
-.hospital-datos-content h3 {
+.two-col h4 {
     padding: 30px 0px;
-    font-size: 1.6em;
-    text-decoration: underline;
-}
-.hospital-datos-content {
-    padding: 30px;
-    width: 40%;
-    border: 3px solid #02326d;
-    border-radius: 10px;
+    font-weight: 500;
 }
 
 .hospital-datos li {
@@ -161,20 +152,4 @@ main {
     color: #04026d;
     font-size: 1.5em;
 }
-.hospital-map-content .hospital-map-info {
-    display: flex;
-    justify-content: space-between;
-}
 
-main figure iframe{
-    padding: 5px 0px;
-    border-radius: 20px;
-    opacity: 0.3;
-}
-
-main figure iframe:hover{
-    opacity: 1;
-    -webkit-box-shadow: 0px 66px 100px -20px rgba(0,0,0,0.56);
--moz-box-shadow: 0px 66px 100px -20px rgba(0,0,0,0.56);
-box-shadow: 0px 66px 100px -20px rgba(0,0,0,0.56);
-}
