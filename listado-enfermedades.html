@@ -21,7 +21,7 @@
     </head>
     <body>
         <header id="inicio" class="header-content">
-            <section>
+            <div>
                 <img
                     src="./img/logo-blanco.png"
                     alt="logo-web"
@@ -41,7 +41,7 @@
                     <option value="Varicela"></option>
                 </datalist>
                 <button type="submit"><i class="fas fa-search"></i></button>
-            </section>
+            </div>
         </header>
         <nav class="nav-bar">
             <ul>
@@ -55,36 +55,33 @@
         <main>
             <h2>ENFERMEDADES</h2>
             <section class="main-filtro">
-                <img
-                    src="./img/logo-blanco.png"
-                    alt="logo-web"
-                    class="header-img"
-                />
-                <button type="submit"><i class="fas fa-search"></i></button>
-                <input
-                    list="search-enfermedades"
-                    placeholder="Filtrar por enfermedad..."
-                    autofocus
-                    autocomplete="off"
-                />
+                <article>
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                    <input
+                        list="search-enfermedades"
+                        placeholder="Filtrar por enfermedad..."
+                        autofocus
+                        autocomplete="off"
+                    />
 
-                <datalist id="search-enfermedades">
-                    <option value="Coronavirus"></option>
-                    <option value="Resfriado com&uacute;n"></option>
-                    <option value="Influenza"></option>
-                    <option value="Sarampi&oacute;n"></option>
-                    <option value="Varicela"></option>
-                </datalist>
+                    <datalist id="search-enfermedades">
+                        <option value="Coronavirus"></option>
+                        <option value="Resfriado com&uacute;n"></option>
+                        <option value="Influenza"></option>
+                        <option value="Sarampi&oacute;n"></option>
+                        <option value="Varicela"></option>
+                    </datalist>
+                </article>
             </section>
-            <section class="parrafo">
-                <article class="imgcontenedor">
+            <section class="img-text-content">
+                <article class="two-col">
                     <img
                         class="img-enfermedad"
                         src="img/coronavirus.png"
                         alt="Covid-19"
                     />
                 </article>
-                <aticle class="texto-enfermedades">
+                <article class="two-col">
                     <h3>CORONAVIRUS</h3>
                     <p>
                         Los síntomas más habituales de la COVID-19 son la
@@ -98,18 +95,16 @@
                         comienzan gradualmente. Algunas de las personas
                         infectadas solo presentan síntomas levísimos.
                     </p>
-                    <a href="detalle-enfermedades.html">Ver Detalle</a>
-                </aticle>
-            </section>
-            <section class="parrafo">
-                <article class="imgcontenedor">
-                    <img
-                        class="img-enfermedad"
-                        src="img/resfriado%20comun.png"
-                        alt="Covid-19"
-                    />
+                    <a href="detalle-enfermedades.html" class="btn-info">
+                        <i class="fas fa-info-circle"></i>
+                        Ver Detalle
+                    </a>
                 </article>
-                <article class="texto-enfermedades">
+
+                <article class="two-col">
+                    <img src="img/resfriado%20comun.png" alt="Covid-19" />
+                </article>
+                <article class="two-col">
                     <h3>RESFIRADO COMÚN</h3>
                     <p>
                         Los resfriados son muy comunes. A menudo no es necesaria
@@ -120,18 +115,15 @@
                         causar un resfriado. Según el virus que tenga, sus
                         síntomas pueden variar.
                     </p>
-                    <a href="#">Ver Detalle</a>
+                    <a href="detalle-enfermedades.html" class="btn-info">
+                        <i class="fas fa-info-circle"></i>
+                        Ver Detalle
+                    </a>
                 </article>
-            </section>
-            <section class="parrafo">
-                <article class="imgcontenedor">
-                    <img
-                        class="img-enfermedad"
-                        src="img/influenza.png"
-                        alt="Covid-19"
-                    />
+                <article class="two-col">
+                    <img src="img/influenza.png" alt="Covid-19" />
                 </article>
-                <article class="texto-enfermedades">
+                <article class="two-col">
                     <h3>INFLUENZA</h3>
                     <p>
                         La gripe afecta a los pulmones, la nariz y la garganta.
@@ -145,18 +137,15 @@
                         síntomas. Una vacuna anual puede prevenir la gripe y
                         limitar sus complicaciones.
                     </p>
-                    <a href="#">Ver Detalle</a>
+                    <a href="detalle-enfermedades.html" class="btn-info">
+                        <i class="fas fa-info-circle"></i>
+                        Ver Detalle
+                    </a>
                 </article>
-            </section>
-            <section class="parrafo">
-                <article class="imgcontenedor">
-                    <img
-                        class="img-enfermedad"
-                        src="img/sarampion.png"
-                        alt="Covid-19"
-                    />
+                <article class="two-col">
+                    <img src="img/sarampion.png" alt="Covid-19" />
                 </article>
-                <article class="texto-enfermedades">
+                <article class="two-col">
                     <h3>SARAMPION</h3>
                     <p>
                         Infección viral grave en los niños pequeños, pero de
@@ -169,18 +158,15 @@
                         fiebre y un sarpullido rojo y con manchas en la piel. La
                         vitamina A pueden ayudar con los síntomas.
                     </p>
-                    <a href="#">Ver Detalle</a>
+                    <a href="detalle-enfermedades.html" class="btn-info">
+                        <i class="fas fa-info-circle"></i>
+                        Ver Detalle
+                    </a>
                 </article>
-            </section>
-            <section class="parrafo">
-                <article class="imgcontenedor">
-                    <img
-                        class="img-enfermedad"
-                        src="img/varicela.png"
-                        alt="Covid-19"
-                    />
+                <article class="two-col">
+                    <img src="img/varicela.png" alt="Covid-19" />
                 </article>
-                <article class="texto-enfermedades">
+                <article class="two-col">
                     <h3>VARICELA</h3>
                     <p>
                         infección viral muy contagiosa que provoca un sarpullido
@@ -194,7 +180,10 @@
                         síntomas, aunque los grupos de alto riesgo pueden
                         recibir medicamentos antivirales.
                     </p>
-                    <a href="#">Ver Detalle</a>
+                    <a href="detalle-enfermedades.html" class="btn-info">
+                        <i class="fas fa-info-circle"></i>
+                        Ver Detalle
+                    </a>
                 </article>
             </section>
             <a href="#inicio" class="arriba"></a>
@@ -202,13 +191,13 @@
         <footer>
             <div class="footer-content">
                 <div class="footer-left">
-                    <h4>Datos del Grupo:</h4>
+                    <h5 class="footer-title">Datos del Grupo</h5>
                     <p>Ezequiel Panigazzi - 38.695.636</p>
                     <p>Lucas Zacarias - 42.436.419</p>
                     <p>Julian Castro - 39.347.169</p>
                 </div>
                 <div class="footer-center">
-                    <h4>Nombre inferior</h4>
+                    <h5 class="footer-title">Nombre inferior</h5>
                     <ul>
                         <li>
                             <a href="listado-enfermedades.html">Enfermedades</a>
@@ -221,7 +210,7 @@
                     </ul>
                 </div>
                 <div class="footer-right">
-                    <h4>Redes Sociales:</h4>
+                    <h5 class="footer-title">Redes Sociales</h5>
                     <div>
                         <a href="https://www.facebook.com/" target="_blank"
                             ><i class="fab fa-facebook"></i
