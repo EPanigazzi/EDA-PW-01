@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="css/style.css" />
         <link rel="stylesheet" href="css/detalle-enfermedades.css" />
         <link
             rel="stylesheet"
@@ -62,6 +62,9 @@
                     </button>
                 </a>
             </section>
+            <div class="mensajeEnvio ocultar" >
+                <p></p>
+            </div>
             <section class="detalles-title">
                 <h1>COVID-19</h1>
                 <article class="img-text-content">
@@ -136,43 +139,46 @@
                     </article>
                 </article>
                 <article class="form-right">
-                    <form action="/detalle-enfermedades.html">
+                    <form action="/detalle-enfermedades.html" onsubmit="return validarFormularioDetEnfermedades()">
                         <label for="name" class="form-label"
-                            >Nombre y Apellido</label
+                            >(*) Nombre y Apellido</label
                         ><br />
                         <input
                             type="text"
                             id="name"
                             name="name"
-                            required
                             autocomplete="off"
                             class="input-100"
-                        /><br /><br />
+                        />
+                        <span class="errorMessage" id="errorNombreApellido"></span>
+                        
                         <div class="form-group">
                             <div>
-                                <label for="dni" class="form-label">DNI</label
+                                <label for="dni" class="form-label">(*) DNI</label
                                 ><br />
                                 <input
                                     type="number"
                                     id="dni"
                                     name="dni"
-                                    required
-                                    autocomplete="off"
-                                    class="input-50"
-                                /><br />
-                            </div>
-                            <div>
-                                <label for="telefono" class="form-label"
-                                    >Tel&eacute;fono</label
-                                ><br />
-                                <input
-                                    type="number"
-                                    id="telefono"
-                                    name="telefono"
-                                    required
                                     autocomplete="off"
                                     class="input-50"
                                 />
+                                <span class="errorMessage" id="errorDNI"></span>
+                                <br />
+                            </div>
+                            <div>
+                                <label for="telefono" class="form-label"
+                                    >(*) Tel&eacute;fono</label
+                                ><br />
+                                <input
+                                    type="text"
+                                    id="telefono"
+                                    name="telefono"
+                                    
+                                    autocomplete="off"
+                                    class="input-50"
+                                />
+                                <span class="errorMessage" id="errorTelefono"></span>
                                 <br /><br />
                             </div>
                         </div>
@@ -180,13 +186,12 @@
                         <div class="form-group">
                             <div>
                                 <label for="city" class="form-label"
-                                    >Ciudad</label
+                                    >(*) Ciudad</label
                                 ><br />
                                 <input
                                     type="text"
                                     id="city"
                                     name="city"
-                                    required
                                     autocomplete="off"
                                     class="input-50"
                                 />
@@ -228,6 +233,7 @@
                             id="travellTrue"
                             name="travell"
                             value="true"
+                            onclick="mostrarPaisesVisitados()"
                         />
                         <label for="travellTrue">Si</label>
                         <input
@@ -235,6 +241,7 @@
                             id="travellFalse"
                             name="travell"
                             value="false"
+                            onclick="ocultarPaisesVisitados()"
                         />
                         <label for="travellFalse">No</label><br /><br />
                         <br />
@@ -246,7 +253,7 @@
                             autofocus
                             autocomplete="off"
                             class="input-100"
-                            required
+                            
                         />
                         <datalist id="countryVisited">
                             <option value="Brasil"></option>
@@ -258,7 +265,7 @@
                         </datalist>
 
                         <p class="text-form">
-                            Por favor, indica los sintomas que presentas:
+                            (*) Por favor, indica los sintomas que presentas:
                         </p>
                         <br />
                         <span>¿Tuviste fiebre mayor a 38 grados?</span>
@@ -275,8 +282,8 @@
                             name="fiebre"
                             value="false"
                         />
-                        <label for="fiebreFalse">No</label><br /><br />
-
+                        <label for="fiebreFalse">No</label><span class="errorMessage" id="errorCheckedFiebre"></span><br />
+                        
                         <span>¿Tuviste dolor de cabeza?</span>
                         <input
                             type="radio"
@@ -291,7 +298,7 @@
                             name="dolorCabeza"
                             value="false"
                         />
-                        <label for="dolorCabezaFalse">No</label><br /><br />
+                        <label for="dolorCabezaFalse">No</label><span class="errorMessage" id="errorCheckedDolorCabeza"></span><br />
 
                         <span>¿Tuviste una tos persistente?</span>
                         <input
@@ -307,7 +314,7 @@
                             name="tos"
                             value="false"
                         />
-                        <label for="tosFalse">No</label><br /><br />
+                        <label for="tosFalse">No</label><span class="errorMessage" id="errorCheckedTos"></span><br />
 
                         <span>¿Tuviste dolor de garganta?</span>
                         <input
@@ -323,7 +330,7 @@
                             name="dolorGarganta"
                             value="false"
                         />
-                        <label for="dolorGargantaFalse">No</label><br /><br />
+                        <label for="dolorGargantaFalse">No</label><span class="errorMessage" id="errorCheckedDolorGaraganta"></span><br />
 
                         <span>¿Tuviste dificultad para respirar?</span>
                         <input
@@ -331,6 +338,7 @@
                             id="dificultadRespirarTrue"
                             name="dificultadRespirar"
                             value="true"
+                            onclick="mostarDireccion()"
                         />
                         <label for="dificultadRespirarTrue">Si</label>
                         <input
@@ -338,18 +346,19 @@
                             id="dificultadRespirarFalse"
                             name="dificultadRespirar"
                             value="false"
+                            onclick="ocultarDireccion()"
                         />
                         <label for="dificultadRespirarFalse">No</label
-                        ><br /><br /><br />
+                        ><span class="errorMessage" id="errorCheckedRespirar"></span><br />
+                        <br />
 
                         <label for="address" class="form-label"
-                            >Direcci&oacute;n</label
+                            >(*) Direcci&oacute;n</label
                         ><br />
                         <input
                             type="text"
                             id="address"
                             name="address"
-                            required
                             autocomplete="off"
                             class="input-100"
                         /><br /><br />
@@ -477,5 +486,7 @@
                 </div>
             </div>
         </footer>
+        <script src="js/detalle-enfermedades.js"></script>
+        <!-- <script src="js/main.js"></script> -->
     </body>
 </html>

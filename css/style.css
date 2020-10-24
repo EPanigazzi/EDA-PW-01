@@ -194,3 +194,41 @@ main figure iframe:hover {
 .footer-right div a:hover {
     color: rgb(197, 181, 181);
 }
+
+
+/* mensaje error / success js */
+.errorMessage{
+    color: red;
+    display: block;
+    margin-bottom: 11px;
+    font-weight: 600;
+}
+
+.errorInput{
+    padding: 15px;
+    margin: 10px 0px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: white;
+    border: 2px solid red ;
+}
+
+.mensajeEnvio{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #5dff5a;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+.mensajeEnvio p{
+    align-items: center;
+    font-size: 1.5em;
+    padding: 15px;
+    font-weight: 500;
+    box-sizing: border-box;
+}
+
+.ocultar{
+    display: none;
+}
