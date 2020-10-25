@@ -17,12 +17,10 @@ h3{
     padding: 15px;
     margin: 10px 0px;
     width: 100%;
-    border-radius: 5px;
+    border-radius: 20px;
     background-color: #c2d5ecbd;
     border: none;
 }
-
-
 
 .two-col button{
     margin-top: 7px;
@@ -38,22 +36,21 @@ h3{
     margin: 10px;
     width: 100%;
     border-radius: 5px;
-    border: 3px solid #ef0000f7;
+    border: 4px solid #34ef00f7;
     background: none;
-    color: black;
     font-weight: 500;
     font-size: 1.3em;
     cursor: pointer;
     transition: background 1s, color 1s;
 }
 .boton-enviar:hover{
-    background:#ef0000f7;
-    color: white;
+    background-color:#34ef00f7;
+    color: black;
 }
 
 
 /*datos de la empresa*/
-.two-col ul li{
+.datos-hospital{
     list-style: none;
     margin-bottom: 10px;
     padding: 5px 0;
@@ -87,12 +84,41 @@ h3{
 }
 
 
-/* Mensaje de envio */
-.mensajeEnvio p{
-    display: none;
+.error{
+    padding: 15px;
+    margin: 10px 0px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: white;
+    border: 2px solid red;
 }
 
-.mensajeEnvio i{
-    color: black;
-    font-size: 1.6em;
+.lista-errores{
+    background-color: #ff0000f5;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 30px 0;
+    color: white;
+}
+
+.lista-errores li{
+    margin-bottom: 30px;
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.mensaje-exito{
+    background-color:  #86e824;
+    width: 100%;
+    padding: 16px;
+    border-radius: 10px;
+    font-size: 2em;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.mensaje-exito i{
+    font-size: 1.4em;
 }
