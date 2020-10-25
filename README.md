@@ -12,8 +12,6 @@ Y por último hacerla responsive.
 
 ## Autores ✒️
 
-_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
-
 * **Lucas Zacarias** -  [Lucas-Zacarias](https://github.com/Lucas-Zacarias)
 * **Julian Castro** - [julicastro](https://github.com/julicastro)
 * **Ezequiel Panigazzi** - [EPanigazzi](https://github.com/EPanigazzi)
