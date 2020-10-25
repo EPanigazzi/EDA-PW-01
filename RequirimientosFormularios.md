@@ -1,6 +1,6 @@
 # Requerimientos
 
-# Pagina detalle de enfermedades
+## Pagina detalle de enfermedades
 
 <p>Al presionar el botón enviar los campos se deben validar:<p>
 <ul>
@@ -30,7 +30,7 @@
 <br>
 
 
-# Pagina contacto
+## Pagina contacto
 
 <p>Al presionar el botón enviar los campos se deben validar:<p>
 <ul>
