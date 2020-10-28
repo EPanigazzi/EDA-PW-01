@@ -17,10 +17,12 @@ h3{
     padding: 15px;
     margin: 10px 0px;
     width: 100%;
-    border-radius: 20px;
+    border-radius: 5px;
     background-color: #c2d5ecbd;
     border: none;
 }
+
+
 
 .two-col button{
     margin-top: 7px;
@@ -30,30 +32,28 @@ h3{
     font-weight: 300;
     text-align: right;
 }
-.boton-enviar{
-    padding: 16px;
-    width: 100%;
-}
 
-.boton-enviar input{
+.boton-enviar{
     padding: 20px;
+    margin: 10px;
     width: 100%;
     border-radius: 5px;
-    border: 4px solid #34ef00f7;
+    border: 3px solid #ef0000f7;
     background: none;
+    color: black;
     font-weight: 500;
     font-size: 1.3em;
     cursor: pointer;
     transition: background 1s, color 1s;
 }
-.boton-enviar input:hover{
-    background-color:#34ef00f7;
-    color: black;
+.boton-enviar:hover{
+    background:#ef0000f7;
+    color: white;
 }
 
 
 /*datos de la empresa*/
-.datos-hospital{
+.two-col ul li{
     list-style: none;
     margin-bottom: 10px;
     padding: 5px 0;
@@ -87,41 +87,12 @@ h3{
 }
 
 
-.error{
-    padding: 15px;
-    margin: 10px 0px;
-    width: 100%;
-    border-radius: 5px;
-    background-color: white;
-    border: 2px solid red;
+/* Mensaje de envio */
+.mensajeEnvio p{
+    display: none;
 }
 
-.lista-errores{
-    background-color: #ff0000f5;
-    padding: 30px;
-    border-radius: 10px;
-    margin: 30px 0;
-    color: white;
-}
-
-.lista-errores li{
-    margin-bottom: 30px;
-    margin-top: 20px;
-    font-size: 1.2em;
-    font-weight: 500;
-}
-
-.mensaje-exito{
-    background-color:  #86e824;
-    width: 100%;
-    padding: 16px;
-    border-radius: 10px;
-    font-size: 2em;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-}
-.mensaje-exito i{
-    font-size: 1.4em;
+.mensajeEnvio i{
+    color: black;
+    font-size: 1.6em;
 }

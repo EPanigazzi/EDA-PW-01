@@ -1,120 +1,105 @@
-const validarnombreCompleto = (nombreCompleto) => {
-    const regexnombreCompleto = /^[a-z]+ [a-z]+$/i;
+//---------VALIDACIONES CONTACTO ------------------------
+//Almaceno los valores de cada validacion en variables
+//Comparo para ver el tipo de mensaje que recibe el usuario
+const validarFormularioContacto = () => {
+    const nombreApellido = validarNombreApellido();
+    const email = validarEmail();
+    const telefono = validarTelefono();
 
-    if (nombreCompleto.length >= 50) {
-        return "Este campo debe tener menos de 50 caracter";
-    }
-    if (!regexnombreCompleto.test(nombreCompleto)) {
-        return "El nombre debe tener solo letras y contener un espacio ej: 'Juan salvo'";
+    if (nombreApellido && email && telefono) {
+        mostrarMensajeEnvioSatisfactorio();
+        setInterval(() => {
+            ocultarMensajeEnvioSatisfactorio();
+        }, 5000);
+
+        //Si dejo true postea y se no ve el cartel
+        //return true;
     }
 
-    return "";
+    return false;
 };
 
-const validarEmail = (email) => {
+const validarNombreApellido = () => {
+    const nombreApellido = document.querySelector("#nombre-apellido").value;
+
+    if (nombreApellido === "") {
+        mensajeError = "El nombre no puede ser vacio";
+        document.querySelector("#errorNombre").innerHTML = mensajeError;
+        document
+            .querySelector("#nombre-apellido")
+            .classList.remove("input-100");
+        document.querySelector("#nombre-apellido").className = "errorInput";
+        return false;
+    }
+    document.querySelector("#errorNombre").textContent = "";
+    document.querySelector("#nombre-apellido").classList.remove("errorInput");
+    document.querySelector("#nombre-apellido").className = "input-100";
+    return true;
+};
+
+const validarEmail = () => {
+    const email = document.querySelector("#email").value;
     const regexEmail = /^[0-9a-zA-Z._.-]+\@[0-9a-zA-Z._.-]+\.[0-9a-zA-Z]+$/;
 
     if (!regexEmail.test(email)) {
-        return "El campo email debe ser seguir el orden del ejemplo 'nombre@mail.com'";
+        mensajeError = "El email debe contener '@'";
+        document.querySelector("#errorEmail").innerHTML = mensajeError;
+        document.querySelector("#email").classList.remove("input-100");
+        document.querySelector("#email").className = "errorInput";
+        return false;
     }
-    return "";
+    document.querySelector("#errorEmail").textContent = "";
+    document.querySelector("#email").classList.remove("errorInput");
+    document.querySelector("#email").className = "input-100";
+    return true;
 };
 
-const validarTelefono = (telefono) => {
+const validarTelefono = () => {
+    const telefono = document.querySelector("#telefono").value;
     const regexTelefono = /^\(?\d{3}\)?[\s\.-]?\d{4}[\s\.-]?\d{4}$/;
 
-    if (telefono.length !== 0) {
-        if (!regexTelefono.test(telefono)) {
-            return "El campo telefono debe contener contener 11 caracteres '011-1234-5678'";
-        }
+    if (!regexTelefono.test(telefono)) {
+        mensajeError = "El numero de telefono debe ser 'XX-XXXX-XXXX' ";
+        document.querySelector("#errorTelefono").innerHTML = mensajeError;
+        document.querySelector("#telefono").classList.remove("input-100");
+        document.querySelector("#telefono").className = "errorInput";
+        return false;
     }
-    return "";
+    document.querySelector("#errorTelefono").textContent = "";
+    document.querySelector("#telefono").classList.remove("errorInput");
+    document.querySelector("#telefono").className = "input-100";
+    return true;
 };
 
-const validarGenero = (genero) => {
-    if (!genero) {
-        return "Debe seleccionar al menos una opcion de sexo";
-    }
+const validarCantidadCaracteres = () => {
+    const caracteresEnUso = document.querySelector("#consulta").value.length;
+    const CANTIDAD_MAX_CARACTERES = 1000;
+    let caracteresRestantes = CANTIDAD_MAX_CARACTERES - caracteresEnUso;
+    let mensajeError = document.querySelector("#errorConsulta");
 
-    return "";
-};
-
-const validarDescripcionConsulta = (descripcionConsulta) => {
-    if (descripcionConsulta.length >= 1000) {
-        return "La consulta no puede ser superior a 1000 caracteres";
-    }
-
-    return "";
-};
-
-const validarFormulario = (Event) => {
-    const $form = document.querySelector("#formularioContacto");
-
-    const nombreCompleto = $form.nombreCompleto.value;
-    const email = $form.email.value;
-    const telefono = $form.telefono.value;
-    const descripcionConsulta = $form["descripcion-consulta"].value;
-    // const genero = $form.genero.value;
-
-    const errorNombre = validarnombreCompleto(nombreCompleto);
-    const errorTelefono = validarTelefono(telefono);
-    const errorEmail = validarEmail(email);
-    const errorDescripcionConsulta = validarDescripcionConsulta(
-        descripcionConsulta
-    );
-
-    const errores = {
-        nombreCompleto: errorNombre,
-        email: errorEmail,
-        telefono: errorTelefono,
-        'descripcion-consulta': errorDescripcionConsulta,
-    };
-
-    const manejoErrores = manejarErrores(errores);
-
-    if(manejoErrores === 0){
-        const $errores = document.querySelector('#errores');
-        $errores.className="ocultar";
-        mensajeExito()
-
-        setInterval(() => {
-            document.querySelector('#exito').style.display='none';
-        }, 5000);
+    if (caracteresEnUso >= 0) {
+        mensajeError.innerHTML = `${caracteresRestantes} / ${CANTIDAD_MAX_CARACTERES}`;
     }
 
-    Event.preventDefault();
+    if (caracteresEnUso > 900) {
+        mensajeError.style.color = "red";
+    } else {
+        mensajeError.style.color = "black";
+    }
 };
+//---------FIN VALIDACIONES CONTACTO ------------------------
 
-const manejarErrores = (errores) => {
-    
-    const $keys = Object.keys(errores);
-    const $errores = document.querySelector('#errores');
-    let contadorErrores = 0;
 
-    $keys.forEach(function(key){
-        const error = errores[key];
+//---------MENSAJES DE ENVIOS -------------------------------
 
-        if(error){
-            $form[key].className ="error";
-
-            const $error = document.createElement('li');
-            $errores.classList.remove("ocultar");
-            $error.innerText = error;
-
-            $errores.appendChild($error);
-            contadorErrores++;
-        }else{
-            
-            $form[key].className ="input-100";
-        }
-    })
-    return contadorErrores;
+const mostrarMensajeEnvioSatisfactorio = () => {
+    const mensajeSatisfactorio = document.querySelector(".mensajeEnvio p");
+    mensajeSatisfactorio.style.display = "block";
 };
-
-const mensajeExito = () =>{
-    const mensaje = document.querySelector('#exito');
-    mensaje.className="mensaje-exito";
-}
-
-const $form = document.querySelector("#formularioContacto");
-$form.onsubmit = validarFormulario;
+const ocultarMensajeEnvioSatisfactorio = () => {
+    const mensajeSatisfactorio = document.querySelector(".mensajeEnvio p");
+    mensajeSatisfactorio.style.display = "none";
+    document.querySelector("#nombre-apellido").value = "";
+    document.querySelector("#email").value = "";
+    document.querySelector("#telefono").value = "";
+};

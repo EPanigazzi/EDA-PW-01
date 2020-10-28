@@ -4,8 +4,8 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>FAMEDIC - Contacto</title>
-        <link rel="stylesheet" href="./css/style.css" />
-        <link rel="stylesheet" href="./css/contacto.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/contacto.css" />
         <link
             rel="stylesheet"
             href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
@@ -58,58 +58,65 @@
             <section class="img-text-content">
                 <article class="two-col">
                     <h3>contacto</h3>
-                    <div id="exito" class="ocultar">
-                        <p><i class="fas fa-check-circle"></i> Tu env&iacute;o fue un &eacute;xito!</p>
-                    </div>
-                    <form action="#" name="formularioContacto" id="formularioContacto">
+                    <form action="#" onsubmit="return validarFormularioContacto()">
+                        <div class="mensajeEnvio">
+                            <p>
+                                <i class="far fa-thumbs-up"></i> 
+                                El env&iacute;o del formulario se realizo de manera satisfactoria
+                            </p>
+                        </div>
                         <div>
-                            <label for="nombreCompleto"></label>
                             <input
                                 type="text"
-                                name="nombreCompleto"
-                                id="nombreCompleto"
+                                name="nombre-apellido"
+                                id="nombre-apellido"
                                 placeholder="Ingrese su nombre y apellido"
                                 class="input-100"
                             />
                         </div>
+                        <span class="errorMessage" id="errorNombre"></span>
                         <div>
-                            <label for="email"></label>
-                            <input
-                                type="email"
-                                name="email"
-                                placeholder="Ingrese su email"
-                                class="input-100"
-                            />
-                        </div>
-                        <div>
-                            <label for="telefono"></label>
                             <input
                                 type="text"
+                                placeholder="Ingrese su email"
+                                name="email"
+                                class="input-100"
+                                id="email"
+                                
+                            />
+                        </div>
+                        <span class="errorMessage" id="errorEmail"></span>
+                        <div>
+                            <input
+                                type="tel"
                                 placeholder="Ingrese su teléfono (opcional)"
                                 class="input-100"
+                                id="telefono"
                                 name="telefono"
                             />
                         </div>
+                        <span class="errorMessage" id="errorTelefono"></span>
                         <div>
-                            <label for="descripcion-consulta"></label>
                             <textarea
-                                name="descripcion-consulta"
-                                id="descripcion-consulta"
+                                name="mensaje"
+                                id="consulta"
                                 cols="30"
                                 rows="15"
-                                maxlength="1000"
                                 placeholder="Escriba aquí su consulta"
+                                onkeyup="validarCantidadCaracteres()"
+                                maxlength="1000"
+                                onpaste="validarCantidadCaracteres()"
                             ></textarea>
+                            <span id="errorConsulta"></span>
                         </div>
-                        <ul id="errores" class="ocultar lista-errores"></ul>
-                        <div class="boton-enviar">
-                            <input type="submit" value="ENVIAR" ></input>
+                        <div>
+                            <input type="submit" class="boton-enviar" value="ENVIAR"></input>
                         </div>
                     </form>
                 </article>
                 <article class="two-col datos-info">
                     <h3>datos de contacto</h3>
-                    <ul class="datos-hospital">
+                    <ul>
                         <li>Direcci&oacute;n: Alberdi 8942</li>
                         <li class="telefonos">Tel&eacute;fono: 2345-9877</li>
                         <li>Celular: 011-4578-9603</li>
@@ -189,6 +196,5 @@
             </div>
         </footer>
         <script src="js/contacto.js"></script>
-        <script src="js/prueba.js"></script>
     </body>
 </html>
