@@ -232,3 +232,34 @@ main figure iframe:hover {
 .ocultar{
     display: none;
 }
+
+.boton-enviar input{
+    padding: 20px;
+    width: 100%;
+    border-radius: 20px;
+    border: 3px solid #40d12ef7;
+    background: none;
+    color: black;
+    font-weight: 500;
+    font-size: 1.3em;
+    cursor: pointer;
+    transition: background 1s, color 1s;
+}
+.boton-enviar input:hover{
+    background:#40d12ef7;
+    color: white;
+}
+
+.campos-obligatorios{
+    background-color: #fd0000;
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 30px;
+    border-radius: 25px;
+}
+.campos-obligatorios p{
+    font-size: 1.2em;
+    font-weight: 500;
+    color: white;
+}

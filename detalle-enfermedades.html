@@ -110,6 +110,12 @@
                     (covid-19)
                 </h3>
             </div>
+            <div id="mensaje-exito" class="mensaje-exito ocultar">
+                <p></p>
+            </div>
+            <br>
+            <br>
+            <br>
             <section class="form-content">
                 <article class="form-left">
                     <p class="form-left-text">
@@ -145,6 +151,9 @@
                         name="detalle-enfermedades"
                         id="detalle-enfermedades"
                     >
+                    <div class="campos-obligatorios">
+                        <p>Los campos con '(*)' son OBLIGATORIOS</p>
+                    </div>
                         <label for="nombre-apellido" class="form-label"
                             >(*) Nombre y Apellido</label
                         ><br />
@@ -273,10 +282,10 @@
                         </datalist>
 
                         <p class="text-form">
-                            (*) Por favor, indica los sintomas que presentas:
+                            Por favor, indica los sintomas que presentas:
                         </p>
                         <br />
-                        <span>¿Tuviste fiebre mayor a 38 grados?</span>
+                        <span>(*) ¿Tuviste fiebre mayor a 38 grados?</span>
                         <input
                             type="radio"
                             name="fiebre"
@@ -294,12 +303,12 @@
                         />
                         <label for="fiebreFalse">No</label
                         ><span
-                            class="errorMessage err"
+                            class="errorMessage "
                             id="errorCheckedFiebre"
                         ></span
                         ><br />
 
-                        <span>¿Tuviste dolor de cabeza?</span>
+                        <span>(*) ¿Tuviste dolor de cabeza?</span>
                         <input
                             type="radio"
                             name="dolorCabeza"
@@ -317,12 +326,12 @@
                         />
                         <label for="dolorCabezaFalse">No</label
                         ><span
-                            class="errorMessage err"
+                            class="errorMessage "
                             id="errorCheckedDolorCabeza"
                         ></span
                         ><br />
 
-                        <span>¿Tuviste una tos persistente?</span>
+                        <span>(*) ¿Tuviste una tos persistente?</span>
                         <input
                             type="radio"
                             name="tos"
@@ -339,10 +348,10 @@
                             class="validarCheck"
                         />
                         <label for="tosFalse">No</label
-                        ><span class="errorMessage err" id="errorCheckedTos"></span
+                        ><span class="errorMessage " id="errorCheckedTos"></span
                         ><br />
 
-                        <span>¿Tuviste dolor de garganta?</span>
+                        <span>(*) ¿Tuviste dolor de garganta?</span>
                         <input
                             type="radio"
                             name="dolorGarganta"
@@ -360,12 +369,12 @@
                         />
                         <label for="dolorGargantaFalse">No</label
                         ><span
-                            class="errorMessage err"
+                            class="errorMessage "
                             id="errorCheckedDolorGaraganta"
                         ></span
                         ><br />
 
-                        <span>¿Tuviste dificultad para respirar?</span>
+                        <span>(*) ¿Tuviste dificultad para respirar?</span>
                         <input
                             type="radio"
                             name="dificultadRespirar"
@@ -385,8 +394,8 @@
                         />
                         <label for="dificultadRespirarFalse">No</label
                         ><span
-                            class="errorMessage err"
-                            id="errorCheckedRespirar campoParaVaciar"
+                            class="errorMessage "
+                            id="errorCheckedRespirar"
                         ></span
                         ><br />
                         <br />
@@ -399,14 +408,15 @@
                             name="address"
                             id="address"
                             autocomplete="off"
-                            class="input-100 ocultar"
+                            class="input-100 ocultar campoParaVaciar"
                         /><br /><br />
 
-                        <input
+                        <div class="boton-enviar">
+                            <input
                             type="submit"
-                            class="boton-enviar"
                             value="ENVIAR TEST"
                         />
+                        </div>
                     </form>
                 </article>
             </section>

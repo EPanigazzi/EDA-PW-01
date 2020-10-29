@@ -7,7 +7,9 @@ const validarFormularioContacto = () => {
     const telefono = validarTelefono();
 
     if (nombreApellido && email && telefono) {
+        document.querySelector('.campos-obligatorios').className="ocultar";
         mostrarMensajeEnvioSatisfactorio();
+
         setInterval(() => {
             ocultarMensajeEnvioSatisfactorio();
         }, 5000);
@@ -25,11 +27,35 @@ const validarEmail = () => {
             "El email debe contener debe ser por ejemplo: 'juan@mail.com' ";
         document.querySelector("#errorEmail").textContent = mensajeError;
         email.className = "errorInput";
+        email.focus();
         return false;
     }
 
     document.querySelector("#errorEmail").textContent = "";
     email.classList.add("input-100", "campoParaVaciar");
+    return true;
+};
+
+const validarTelefono = () => {
+    const telefono = document.querySelector("#telefono");
+    const regexTelefono = /^\d{4}[\s -]?\d{4}$/;
+
+    if(telefono.value === ""){
+        document.querySelector("#errorTelefono").textContent = "";
+        telefono.classList.add("input-100", "campoParaVaciar");
+        return true;
+    }
+
+    if (!regexTelefono.test(telefono.value)) {
+        mensajeError = "Debe ser: '1234-7654'";
+        document.querySelector("#errorTelefono").textContent = mensajeError;
+        telefono.className = "errorInput";
+        telefono.focus();
+        return false;
+    }
+
+    document.querySelector("#errorTelefono").textContent = "";
+    telefono.classList.add("input-100", "campoParaVaciar");
     return true;
 };
 
