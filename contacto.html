@@ -59,7 +59,7 @@
                 <article class="two-col">
                     <h3>contacto</h3>
                     <form action="#" onsubmit="return validarFormularioContacto()">
-                        <div class="mensajeEnvio">
+                        <div class="mensaje-envio ocultar">
                             <p>
                                 <i class="far fa-thumbs-up"></i> 
                                 El env&iacute;o del formulario se realizo de manera satisfactoria
@@ -70,29 +70,32 @@
                                 type="text"
                                 name="nombre-apellido"
                                 id="nombre-apellido"
-                                placeholder="Ingrese su nombre y apellido"
-                                class="input-100"
+                                placeholder="(*)  Ingrese su nombre y apellido"
+                                autocomplete="off"
+                                class="input-100 campoParaVaciar"
                             />
                         </div>
                         <span class="errorMessage" id="errorNombre"></span>
                         <div>
                             <input
                                 type="text"
-                                placeholder="Ingrese su email"
                                 name="email"
-                                class="input-100"
                                 id="email"
+                                placeholder="(*)  Ingrese su email"
+                                autocomplete="off"
+                                class="input-100 campoParaVaciar"
                                 
                             />
                         </div>
                         <span class="errorMessage" id="errorEmail"></span>
                         <div>
                             <input
-                                type="tel"
-                                placeholder="Ingrese su teléfono (opcional)"
-                                class="input-100"
-                                id="telefono"
+                                type="text"
                                 name="telefono"
+                                id="telefono"
+                                placeholder="Ingrese su teléfono (opcional)"
+                                autocomplete="off"
+                                class="input-100 campoParaVaciar"
                             />
                         </div>
                         <span class="errorMessage" id="errorTelefono"></span>
@@ -102,15 +105,17 @@
                                 id="consulta"
                                 cols="30"
                                 rows="15"
-                                placeholder="Escriba aquí su consulta"
-                                onkeyup="validarCantidadCaracteres()"
                                 maxlength="1000"
+                                placeholder="Escriba aquí su consulta"
+                                class="campoParaVaciar"
+                                autocomplete="off"
+                                onkeyup="validarCantidadCaracteres()"
                                 onpaste="validarCantidadCaracteres()"
                             ></textarea>
                             <span id="errorConsulta"></span>
                         </div>
-                        <div>
-                            <input type="submit" class="boton-enviar" value="ENVIAR"></input>
+                        <div class="boton-enviar">
+                            <input type="submit"  value="ENVIAR"></input>
                         </div>
                     </form>
                 </article>
@@ -196,5 +201,6 @@
             </div>
         </footer>
         <script src="js/contacto.js"></script>
+        <script src="js/main.js"></script>
     </body>
 </html>

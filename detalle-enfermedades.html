@@ -62,7 +62,7 @@
                     </button>
                 </a>
             </section>
-            <div class="mensajeEnvio ocultar" >
+            <div class="mensajeEnvio ocultar">
                 <p></p>
             </div>
             <section class="detalles-title">
@@ -139,29 +139,35 @@
                     </article>
                 </article>
                 <article class="form-right">
-                    <form action="/detalle-enfermedades.html" onsubmit="return validarFormularioDetEnfermedades()">
-                        <label for="name" class="form-label"
+                    <form
+                        action="/detalle-enfermedades.html"
+                        onsubmit="return ValidarFormularioEnfermedades()"
+                        name="detalle-enfermedades"
+                        id="detalle-enfermedades"
+                    >
+                        <label for="nombre-apellido" class="form-label"
                             >(*) Nombre y Apellido</label
                         ><br />
                         <input
                             type="text"
-                            id="name"
-                            name="name"
+                            name="nombre-apellido"
+                            id="nombre-apellido"
                             autocomplete="off"
-                            class="input-100"
+                            class="input-100 campoParaVaciar"
                         />
-                        <span class="errorMessage" id="errorNombreApellido"></span>
-                        
+                        <span class="errorMessage" id="errorNombre"></span>
+
                         <div class="form-group">
                             <div>
-                                <label for="dni" class="form-label">(*) DNI</label
+                                <label for="dni" class="form-label"
+                                    >(*) DNI</label
                                 ><br />
                                 <input
                                     type="number"
-                                    id="dni"
                                     name="dni"
+                                    id="dni"
                                     autocomplete="off"
-                                    class="input-50"
+                                    class="input-50 campoParaVaciar"
                                 />
                                 <span class="errorMessage" id="errorDNI"></span>
                                 <br />
@@ -172,13 +178,15 @@
                                 ><br />
                                 <input
                                     type="text"
-                                    id="telefono"
                                     name="telefono"
-                                    
+                                    id="telefono"
                                     autocomplete="off"
-                                    class="input-50"
+                                    class="input-50 campoParaVaciar"
                                 />
-                                <span class="errorMessage" id="errorTelefono"></span>
+                                <span
+                                    class="errorMessage"
+                                    id="errorTelefono"
+                                ></span>
                                 <br /><br />
                             </div>
                         </div>
@@ -190,10 +198,10 @@
                                 ><br />
                                 <input
                                     type="text"
-                                    id="city"
                                     name="city"
+                                    id="city"
                                     autocomplete="off"
-                                    class="input-50"
+                                    class="input-50 campoParaVaciar"
                                 />
                             </div>
                             <div class="form-gender">
@@ -201,22 +209,22 @@
                                 <br />
                                 <input
                                     type="radio"
-                                    id="male"
                                     name="gender"
+                                    id="male"
                                     value="male"
                                 />
                                 <label for="male">M</label>
                                 <input
                                     type="radio"
-                                    id="female"
                                     name="gender"
+                                    id="female"
                                     value="female"
                                 />
                                 <label for="female">F</label>
                                 <input
                                     type="radio"
-                                    id="other"
                                     name="gender"
+                                    id="other"
                                     value="other"
                                     checked
                                 />
@@ -230,30 +238,30 @@
                         >
                         <input
                             type="radio"
-                            id="travellTrue"
                             name="travell"
+                            id="travellTrue"
                             value="true"
-                            onclick="mostrarPaisesVisitados()"
+                            onchange="mostarCampo('countryVisited', 'countryVisited')"
                         />
                         <label for="travellTrue">Si</label>
                         <input
                             type="radio"
-                            id="travellFalse"
                             name="travell"
+                            id="travellFalse"
                             value="false"
-                            onclick="ocultarPaisesVisitados()"
+                            onchange="ocultarCampo('countryVisited', 'countryVisited')"
                         />
                         <label for="travellFalse">No</label><br /><br />
                         <br />
-                        <label for="countryVisited" class="form-label"
+                        <label for="countryVisited" class="form-label ocultar"
                             >Pa&iacute;ses visitados</label
                         >
                         <input
                             list="countryVisited"
+                            id="countryVisited"
                             autofocus
                             autocomplete="off"
-                            class="input-100"
-                            
+                            class="input-100 ocultar"
                         />
                         <datalist id="countryVisited">
                             <option value="Brasil"></option>
@@ -271,96 +279,127 @@
                         <span>¿Tuviste fiebre mayor a 38 grados?</span>
                         <input
                             type="radio"
-                            id="fiebreTrue"
                             name="fiebre"
+                            id="fiebreTrue"
                             value="true"
+                            class="checkarValor validarCheck"
                         />
                         <label for="fiebreTrue">Si</label>
                         <input
                             type="radio"
-                            id="fiebreFalse"
                             name="fiebre"
+                            id="fiebreFalse"
                             value="false"
+                            class="validarCheck"
                         />
-                        <label for="fiebreFalse">No</label><span class="errorMessage" id="errorCheckedFiebre"></span><br />
-                        
+                        <label for="fiebreFalse">No</label
+                        ><span
+                            class="errorMessage err"
+                            id="errorCheckedFiebre"
+                        ></span
+                        ><br />
+
                         <span>¿Tuviste dolor de cabeza?</span>
                         <input
                             type="radio"
-                            id="dolorCabezaTrue"
                             name="dolorCabeza"
+                            id="dolorCabezaTrue"
                             value="true"
+                            class="checkarValor validarCheck"
                         />
                         <label for="dolorCabezaTrue">Si</label>
                         <input
                             type="radio"
-                            id="dolorCabezaFalse"
                             name="dolorCabeza"
+                            id="dolorCabezaFalse"
                             value="false"
+                            class="validarCheck"
                         />
-                        <label for="dolorCabezaFalse">No</label><span class="errorMessage" id="errorCheckedDolorCabeza"></span><br />
+                        <label for="dolorCabezaFalse">No</label
+                        ><span
+                            class="errorMessage err"
+                            id="errorCheckedDolorCabeza"
+                        ></span
+                        ><br />
 
                         <span>¿Tuviste una tos persistente?</span>
                         <input
                             type="radio"
-                            id="tosTrue"
                             name="tos"
+                            id="tosTrue"
                             value="true"
+                            class="checkarValor validarCheck"
                         />
                         <label for="tosTrue">Si</label>
                         <input
                             type="radio"
-                            id="tosFalse"
                             name="tos"
+                            id="tosFalse"
                             value="false"
+                            class="validarCheck"
                         />
-                        <label for="tosFalse">No</label><span class="errorMessage" id="errorCheckedTos"></span><br />
+                        <label for="tosFalse">No</label
+                        ><span class="errorMessage err" id="errorCheckedTos"></span
+                        ><br />
 
                         <span>¿Tuviste dolor de garganta?</span>
                         <input
                             type="radio"
-                            id="dolorGargantaTrue"
                             name="dolorGarganta"
+                            id="dolorGargantaTrue"
                             value="true"
+                            class="checkarValor validarCheck"
                         />
                         <label for="dolorGargantaTrue">Si</label>
                         <input
                             type="radio"
-                            id="dolorGargantaFalse"
                             name="dolorGarganta"
+                            id="dolorGargantaFalse"
                             value="false"
+                            class="validarCheck"
                         />
-                        <label for="dolorGargantaFalse">No</label><span class="errorMessage" id="errorCheckedDolorGaraganta"></span><br />
+                        <label for="dolorGargantaFalse">No</label
+                        ><span
+                            class="errorMessage err"
+                            id="errorCheckedDolorGaraganta"
+                        ></span
+                        ><br />
 
                         <span>¿Tuviste dificultad para respirar?</span>
                         <input
                             type="radio"
-                            id="dificultadRespirarTrue"
                             name="dificultadRespirar"
+                            id="dificultadRespirarTrue"
                             value="true"
-                            onclick="mostarDireccion()"
+                            class="checkarValor validarCheck"
+                            onchange="mostarCampo('address', 'address')"
                         />
                         <label for="dificultadRespirarTrue">Si</label>
                         <input
                             type="radio"
-                            id="dificultadRespirarFalse"
                             name="dificultadRespirar"
+                            id="dificultadRespirarFalse"
                             value="false"
-                            onclick="ocultarDireccion()"
+                            class="validarCheck"
+                            onchange="ocultarCampo('address', 'address')"
                         />
                         <label for="dificultadRespirarFalse">No</label
-                        ><span class="errorMessage" id="errorCheckedRespirar"></span><br />
+                        ><span
+                            class="errorMessage err"
+                            id="errorCheckedRespirar campoParaVaciar"
+                        ></span
+                        ><br />
                         <br />
 
-                        <label for="address" class="form-label"
+                        <label for="address" class="form-label ocultar"
                             >(*) Direcci&oacute;n</label
                         ><br />
                         <input
                             type="text"
-                            id="address"
                             name="address"
+                            id="address"
                             autocomplete="off"
-                            class="input-100"
+                            class="input-100 ocultar"
                         /><br /><br />
 
                         <input
@@ -429,9 +468,7 @@
                             <i class="fas fa-map-marker-alt"></i> Av. Monroe
                             3555, CABA
                         </li>
-                        <li>
-                            <i class="fas fa-city"></i> Buenos Aires, CABA
-                        </li>
+                        <li><i class="fas fa-city"></i> Buenos Aires, CABA</li>
                     </ul>
                 </article>
                 <article class="two-col">
@@ -487,5 +524,6 @@
             </div>
         </footer>
         <script src="js/detalle-enfermedades.js"></script>
+        <script src="js/main.js"></script>
     </body>
 </html>

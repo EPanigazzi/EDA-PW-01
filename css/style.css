@@ -208,7 +208,7 @@ main figure iframe:hover {
     padding: 15px;
     margin: 10px 0px;
     width: 100%;
-    border-radius: 5px;
+    border-radius: 25px;
     background-color: white;
     border: 2px solid red ;
 }
