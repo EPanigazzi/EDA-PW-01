@@ -16,22 +16,6 @@ const validarFormularioContacto = () => {
     return false;
 };
 
-const validarNombreApellido = () => {
-    const nombreApellido = document.querySelector("#nombre-apellido");
-    const regexNombreCompleto = /^[a-z]+ [a-z]+$/i;
-
-    if (!regexNombreCompleto.test(nombreApellido.value)) {
-        mensajeError = "El nombre debe ser por ejemplo: 'Juan perez' ";
-        document.querySelector("#errorNombre").textContent = mensajeError;
-        nombreApellido.className = "errorInput";
-        return false;
-    }
-
-    document.querySelector("#errorNombre").textContent = "";
-    nombreApellido.classList.add("input-100", "campoParaVaciar");
-    return true;
-};
-
 const validarEmail = () => {
     const email = document.querySelector("#email");
     const regexEmail = /^[0-9a-zA-Z._.-]+\@[0-9a-zA-Z._.-]+\.[0-9a-zA-Z]+$/;
@@ -46,22 +30,6 @@ const validarEmail = () => {
 
     document.querySelector("#errorEmail").textContent = "";
     email.classList.add("input-100", "campoParaVaciar");
-    return true;
-};
-
-const validarTelefono = () => {
-    const telefono = document.querySelector("#telefono");
-    const regexTelefono = /^\(?\d{3}\)?[\s\.-]?\d{4}[\s\.-]?\d{4}$/;
-
-    if (!regexTelefono.test(telefono.value)) {
-        mensajeError = "El número de teléfono debe ser 'XX-XXXX-XXXX' ";
-        document.querySelector("#errorTelefono").textContent = mensajeError;
-        telefono.className = "errorInput";
-        return false;
-    }
-
-    document.querySelector("#errorTelefono").textContent = "";
-    telefono.classList.add("input-100", "campoParaVaciar");
     return true;
 };
 
@@ -95,10 +63,4 @@ const ocultarMensajeEnvioSatisfactorio = () => {
     vaciarCamposFormulario();
 };
 
-const vaciarCamposFormulario = () => {
-    const camposAVaciar = document.querySelectorAll(".campoParaVaciar");
 
-    for (i in camposAVaciar) {
-        camposAVaciar[i].value = "";
-    }
-};

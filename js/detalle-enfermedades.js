@@ -1,52 +1,50 @@
-const validarFormularioDetEnfermedades = () => {
-    const nombreApellido = validarNombreApellido();
-    const DNI = validarDNI();
-    const telefono = validarTelefono();
-    const fiebre = validarPreguntaFiebre();
-    const dolorCabeza = validarPreguntaDolorCabeza();
-    const tos = validarPreguntaTos();
-    const dolorGarganta = validarPreguntaDolorGarganta();
-    const respirar = validarPreguntaRespirar();
+// VARIABLES CONSTANTES
+const $form = document.querySelector('#detalle-enfermedades');
+let contadorSintomas = 0;
 
-    const cantidadDeSintomasPositivos = calcularCantidadDeSintomasPositivos(
-        fiebre,
-        dolorCabeza,
-        tos,
-        dolorGarganta,
-        respirar
-    );
 
-    const mensaje = `El fomulario fue completado correctamente. ${cantidadDeSintomasPositivos} sintomas de COVID-19 fueron registrados`;
 
-    if (nombreApellido && DNI && telefono)
-        if (
-            fiebre !== -1 &&
-            dolorCabeza !== -1 &&
-            tos !== -1 &&
-            dolorGarganta !== -1 &&
-            respirar !== -1
-        ) {
-            document.querySelector(".mensajeEnvio").classList.remove("ocultar");
-            document.querySelector(".mensajeEnvio p").innerHTML = mensaje
-        }
+const ValidarFormularioEnfermedades = () => {
+
+    validarNombreApellido();
+    validarTelefono();
+    validarDNI();
+    validarSintomaEsteChequeado();
+    contarCantidadDeSintomasPositivos();
+    //const nombreApellido = validarNombreApellido();
+    // const DNI = validarDNI();
+    // const telefono = validarTelefono();
+    // const fiebre = validarPreguntaFiebre();
+    // const dolorCabeza = validarPreguntaDolorCabeza();
+    // const tos = validarPreguntaTos();
+    // const dolorGarganta = validarPreguntaDolorGarganta();
+    // const respirar = validarPreguntaRespirar();
+
+    // const cantidadDeSintomasPositivos = calcularCantidadDeSintomasPositivos(
+    //     fiebre,
+    //     dolorCabeza,
+    //     tos,
+    //     dolorGarganta,
+    //     respirar
+    // );
+
+    // const mensaje = `El fomulario fue completado correctamente. ${cantidadDeSintomasPositivos} sintomas de COVID-19 fueron registrados`;
+
+    // if (nombreApellido && DNI && telefono)
+    //     if (
+    //         fiebre !== -1 &&
+    //         dolorCabeza !== -1 &&
+    //         tos !== -1 &&
+    //         dolorGarganta !== -1 &&
+    //         respirar !== -1
+    //     ) {
+    //         document.querySelector(".mensajeEnvio").classList.remove("ocultar");
+    //         document.querySelector(".mensajeEnvio p").innerHTML = mensaje
+    //     }
 
     return false;
 };
 
-const validarNombreApellido = () => {
-    const nombreApellido = document.querySelector("#name");
-    const mensaje = "Campo obligatorio";
-
-    if (!nombreApellido.value) {
-        nombreApellido.className = "errorInput";
-        document.querySelector("#errorNombreApellido").innerHTML = mensaje;
-        return false;
-    }
-    nombreApellido.className = "input-100";
-    nombreApellido.classList.remove("errorInput");
-    document.querySelector("#errorNombreApellido").innerHTML = "";
-    return true;
-};
 
 const validarDNI = () => {
     const nroDNI = document.querySelector("#dni").value;
@@ -64,56 +62,54 @@ const validarDNI = () => {
     return true;
 };
 
-const validarTelefono = () => {
-    const nroTelefono = document.querySelector("#telefono").value;
-    const regexTelefono = /^\(?\d{3}\)?[\s\.-]?\d{4}[\s\.-]?\d{4}$/;
-    const mensaje = "Debe ser XX-XXXX-XXXX";
-
-    if (!regexTelefono.test(nroTelefono)) {
-        document.querySelector("#telefono").className= "errorInput";
-        document.querySelector("#errorTelefono").innerHTML = mensaje;
-        return false;
-    }
-    document.querySelector("#telefono").classList.remove("errorInput");
-    document.querySelector("#telefono").className = "input-100";
-    document.querySelector("#errorTelefono").innerHTML = "";
-    return true;
+const mostarCampo = (labelName, inputId) => {
+    document.querySelector(`[for = '${labelName}']`).className="form-label";
+    document.querySelector(`#${inputId}`).className="input-100";
+};
+const ocultarCampo = (labelName, inputId) => {
+    document.querySelector(`[for = '${labelName}']`).className="ocultar";
+    document.querySelector(`#${inputId}`).className="ocultar";
 };
 
-//Pregunta de viaje al exterior
 
-const ocultarPaisesVisitados = () => {
-    const preguntaExteriorFalse = document.querySelector("#travellFalse")
-        .checked;
-    const opcionPaisesVisitadosLabel = document.querySelector(
-        "[for = 'countryVisited']"
-    );
-    const opcionPaisesVisitadosInput = document.querySelector(
-        "[list = 'countryVisited']"
-    );
 
-    if (preguntaExteriorFalse) {
-        opcionPaisesVisitadosLabel.style.display = "none";
-        opcionPaisesVisitadosInput.style.display = "none";
+
+const contarCantidadDeSintomasPositivos = () => {
+    const sintomasPositivos = document.querySelectorAll('.checkarValor');
+    
+    for(let i=0; i<sintomasPositivos.length; i++){
+        if(sintomasPositivos[i].checked){
+            contadorSintomas = contadorSintomas + 1;
+        }
     }
-};
+    
+    return console.log("contadorSintomas " + " " + contadorSintomas);
+}
 
-const mostrarPaisesVisitados = () => {
-    const preguntaExteriorTrue = document.querySelector("#travellTrue").checked;
-    const opcionPaisesVisitadosLabel = document.querySelector(
-        "[for = 'countryVisited']"
-    );
-    const opcionPaisesVisitadosInput = document.querySelector(
-        "[list = 'countryVisited']"
-    );
 
-    if (preguntaExteriorTrue) {
-        opcionPaisesVisitadosLabel.style.display = "block";
-        opcionPaisesVisitadosInput.style.display = "block";
+const validarSintomaEsteChequeado = () =>{
+    const sintomasCheckeados = document.querySelectorAll('.validarCheck');
+    let mensajesDeErrores = document.querySelectorAll('.err');
+    let aux = false;
+
+    for(let i=1; i<sintomasCheckeados.length; i++){
+        for (let j = 0; j < sintomasCheckeados.length-1 ; j++) {
+            if(sintomasCheckeados[j].checked == sintomasCheckeados[j+1].checked){
+                mensajesDeErrores[j].textContent = "Debe completar con 'Si' o 'No'";
+            }
+        }
     }
-};
+    // for(let i=0; i<sintomasCheckeados.length; i++){
+    //     for (let j = 0; j < mensajesDeErrores.length; j++) {
+    //         console.log(sintomasCheckeados[i].checked)
+    //         // aux = sintomasCheckeados[i];
+    //         // sintomasCheckeados[i] = 
+    //         mensajesDeErrores[j].textContent = "Debe completar con 'Si' o 'No'";
+    //     }
+    // }
 
-//FIN -----Pregunta de viaje al exterior
+    return false;
+}
 
 //Preguntas sintomas
 
