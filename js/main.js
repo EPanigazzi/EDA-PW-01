@@ -7,6 +7,7 @@ const validarNombreApellido = () => {
         mensajeError = "El nombre debe ser por ejemplo: 'Juan perez' ";
         document.querySelector("#errorNombre").textContent = mensajeError;
         nombreApellido.className = "errorInput";
+        nombreApellido.focus();
         return false;
     }
 
@@ -15,21 +16,6 @@ const validarNombreApellido = () => {
     return true;
 };
 
-const validarTelefono = () => {
-    const telefono = document.querySelector("#telefono");
-    const regexTelefono = /^\d{4}[\s -]?\d{4}$/;
-
-    if (!regexTelefono.test(telefono.value)) {
-        mensajeError = "Debe ser: '1234-7654'";
-        document.querySelector("#errorTelefono").textContent = mensajeError;
-        telefono.className = "errorInput";
-        return false;
-    }
-
-    document.querySelector("#errorTelefono").textContent = "";
-    telefono.classList.add("input-100", "campoParaVaciar");
-    return true;
-};
 
 const vaciarCamposFormulario = () => {
     const camposAVaciar = document.querySelectorAll(".campoParaVaciar");

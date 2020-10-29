@@ -13,7 +13,7 @@ const ValidarFormularioEnfermedades = () => {
         document.querySelector('.campos-obligatorios').className="ocultar";
         mostrarMensajeExito();
         setInterval(() => {
-            document.querySelector('#mensaje-exito').className="ocultar"
+            ocultarMensajeExito();
         }, 5000);
     }
         
@@ -28,10 +28,28 @@ const validarDNI = () => {
     if (!regexDNI.test(nroDNI.value)) {
         nroDNI.className = "errorInput";
         document.querySelector("#errorDNI").innerHTML = mensajeError;
+        nroDNI.focus();
         return false;
     }
     nroDNI.className = "input-100";
     document.querySelector("#errorDNI").innerHTML = "";
+    return true;
+};
+
+const validarTelefono = () => {
+    const telefono = document.querySelector("#telefono");
+    const regexTelefono = /^\d{4}[\s -]?\d{4}$/;
+
+    if (!regexTelefono.test(telefono.value)) {
+        mensajeError = "Debe ser: '1234-7654'";
+        document.querySelector("#errorTelefono").textContent = mensajeError;
+        telefono.className = "errorInput";
+        telefono.focus();
+        return false;
+    }
+
+    document.querySelector("#errorTelefono").textContent = "";
+    telefono.classList.add("input-100", "campoParaVaciar");
     return true;
 };
 
@@ -142,6 +160,10 @@ const mostrarMensajeExito = () => {
 
     mensajeExito.textContent = `Él formulario fue completado correctamente. 
     ${contarCantidadDeSintomasPositivos()} síntomas de COVID-19 fueron registrados`;
+}
+const ocultarMensajeExito = () => {
+    document.querySelector('#mensaje-exito').className="ocultar"
+    vaciarCamposFormulario();
 }
 
 const mostarCampo = (labelName, inputId) => {
