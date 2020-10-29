@@ -152,3 +152,32 @@
     color: #04026d;
     font-size: 1.5em;
 }
+
+.campos-obligatorios{
+    background-color: #fd0000;
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 30px;
+    border-radius: 25px;
+}
+.campos-obligatorios p{
+    font-size: 1.2em;
+    font-weight: 500;
+    color: white;
+}
+
+.mensaje-exito{
+    background-color: #bcff79;
+    border: 4px solid chartreuse;
+    text-align: center;
+    width: 80%;
+    padding: 15px;
+    margin-bottom: 30px;
+    border-radius: 25px;
+    margin: auto;
+}
+.mensaje-exito p{
+    font-weight: 500;
+    font-size: 2em;
+}

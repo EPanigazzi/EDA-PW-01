@@ -17,10 +17,10 @@ const validarNombreApellido = () => {
 
 const validarTelefono = () => {
     const telefono = document.querySelector("#telefono");
-    const regexTelefono = /^\(?\d{3}\)?[\s\.-]?\d{4}[\s\.-]?\d{4}$/;
+    const regexTelefono = /^\d{4}[\s -]?\d{4}$/;
 
     if (!regexTelefono.test(telefono.value)) {
-        mensajeError = "Debe ser: '011-XXXX-XXXX'";
+        mensajeError = "Debe ser: '1234-7654'";
         document.querySelector("#errorTelefono").textContent = mensajeError;
         telefono.className = "errorInput";
         return false;
