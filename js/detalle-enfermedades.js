@@ -14,7 +14,7 @@ const ValidarFormularioEnfermedades = () => {
         mostrarMensajeExito();
         setInterval(() => {
             ocultarMensajeExito();
-        }, 5000);
+        }, 8000);
     }
         
     return false;

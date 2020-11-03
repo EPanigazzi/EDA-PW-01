@@ -43,6 +43,9 @@ p {
     width: 100%;
     margin: auto;
 }
+.ocultar {
+    display: none;
+}
 
 /* header */
 .header-content {
@@ -53,14 +56,14 @@ p {
 .header-content div {
     display: flex;
     justify-content: center;
+    flex-wrap: nowrap;
 }
 .header-content div img {
-    margin-right: 8%;
-    width: 4%;
+    display: none;
 }
 .header-content div input {
-    margin-right: 1%;
-    width: 70%;
+    margin-right: 20px;
+    width: 80%;
     border: none;
     opacity: 0.7;
     color: black;
@@ -69,7 +72,7 @@ p {
 }
 .header-content div button {
     font-size: 1.3em;
-    padding: 1%;
+    padding: 10px;
     background: rgb(30 65 109);
     border: none;
     border-radius: 10px;
@@ -79,95 +82,53 @@ p {
 
 /* nav-bar */
 .nav-bar ul {
-    display: flex;
-    justify-content: center;
     background: #1e416d;
-    flex-wrap: wrap;
 }
 .nav-bar ul li {
-    list-style: none;
     text-transform: uppercase;
-    width: 12%;
     padding: 15px 0px;
-    box-sizing: border-box;
     text-align: center;
+    list-style: none;
 }
 .nav-bar ul li a {
     text-decoration: none;
     font-weight: 600;
     font-size: 1.2em;
-    color: white;
-}
-.nav-bar ul li:hover {
-    font-weight: 700;
-    border-bottom: 6px solid white;
+    color: rgb(160 159 159);
+    padding: 10px;
 }
 .nav-bar ul li a:hover {
-    color: rgb(207, 204, 204);
+    color: white;
 }
-
-/* btn-arriba */
-.arriba {
-    display: block;
-    width: 60px;
-    height: 60px;
-    background-color: rgb(11 97 204);
-    position: fixed;
-    right: 10px;
-    bottom: 10px;
-    border-radius: 50%;
-    background-image: url(../img/flecha.png);
-    background-size: cover;
-    border: none;
-    opacity: 0.7;
-}
-.arriba:hover {
-    background-color: rgb(11 97 204);
-    background-image: url(../img/flecha.png);
-    background-size: cover;
-    opacity: 1;
-    border: none;
-}
-
-/*mapa de google*/
-main figure iframe {
-    padding: 5px 0px;
-    border-radius: 20px;
-    opacity: 0.3;
-    width: 100%;
-    height: 600px;
-}
-
-main figure iframe:hover {
-    opacity: 1;
-    -webkit-box-shadow: 0px 66px 100px -20px rgba(0, 0, 0, 0.56);
-    -moz-box-shadow: 0px 66px 100px -20px rgba(0, 0, 0, 0.56);
-    box-shadow: 0px 66px 100px -20px rgba(0, 0, 0, 0.56);
-}
-
-/* contenedor padre-hijo imagenes */
-.img-text-content {
+.nav-bar-menu {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
 }
-.two-col {
-    width: calc(50% - 6em);
-    box-sizing: border-box;
+.nav-bar-menu i {
+    position: absolute;
+    left: 0px;
+    color: white;
+    font-size: 1.2em;
+    padding: 10px;
+}
+.nav-bar-opciones {
+    display: block;
 }
 
 /* footer */
 .footer-content {
     background: rgb(2 50 109);
     color: white;
-    display: flex;
-    justify-content: space-evenly;
-    padding: 40px;
+    display: block;
     margin-top: 50px;
+    padding: 10px;
+    text-align: center;
 }
 
 .footer-title {
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 
 .footer-content ul {
@@ -181,85 +142,226 @@ main figure iframe:hover {
     font-size: 1.1em;
     font-weight: 500;
 }
-.footer-right h4 {
-    margin-bottom: 20px;
-}
-.footer-right div a {
+.footer-right a {
     text-decoration: none;
     font-size: 2em;
-    margin-right: 10px;
-    color: white;
+    margin-right: 20px;
     cursor: pointer;
-}
-.footer-right div a:hover {
     color: rgb(197, 181, 181);
-}
-
-
-/* mensaje error / success js */
-.errorMessage{
-    color: red;
-    display: block;
-    margin-bottom: 11px;
-    font-weight: 600;
-}
-
-.errorInput{
-    padding: 15px;
-    margin: 10px 0px;
-    width: 100%;
-    border-radius: 25px;
-    background-color: white;
-    border: 2px solid red ;
-}
-
-.mensajeEnvio{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    background-color: #5dff5a;
-    margin-top: 20px;
-    border-radius: 10px;
-}
-.mensajeEnvio p{
-    align-items: center;
-    font-size: 1.5em;
-    padding: 15px;
-    font-weight: 500;
-    box-sizing: border-box;
-}
-
-.ocultar{
-    display: none;
-}
-
-.boton-enviar input{
-    padding: 20px;
-    width: 100%;
-    border-radius: 20px;
-    border: 3px solid #40d12ef7;
-    background: none;
-    color: black;
-    font-weight: 500;
-    font-size: 1.3em;
-    cursor: pointer;
-    transition: background 1s, color 1s;
-}
-.boton-enviar input:hover{
-    background:#40d12ef7;
-    color: white;
-}
-
-.campos-obligatorios{
-    background-color: #fd0000;
     text-align: center;
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 30px;
-    border-radius: 25px;
 }
-.campos-obligatorios p{
-    font-size: 1.2em;
-    font-weight: 500;
+.footer-right a:hover {
     color: white;
+}
+
+/* TABLET */
+@media screen and (min-width: 768px) {
+    /* header */
+    .header-content div img {
+        margin-right: 35px;
+        display: block;
+        width: 8%;
+    }
+    .header-content div input {
+        margin-right: 20px;
+        width: 80%;
+    }
+    .header-content div button {
+        padding: 15px;
+    }
+    /* nav-bar */
+    .nav-bar ul {
+        display: flex;
+        justify-content: space-evenly;
+        background: #1e416d;
+        flex-wrap: wrap;
+    }
+    .nav-bar ul li {
+        box-sizing: border-box;
+    }
+    .nav-bar ul li a {
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.2em;
+        color: rgb(160 159 159);
+        text-transform: uppercase;
+    }
+    .nav-bar ul li:hover {
+        font-weight: 700;
+        border-bottom: 6px solid white;
+    }
+    .nav-bar ul li a:hover {
+        color: rgb(207, 204, 204);
+        color: white;
+    }
+    /* footer */
+    .footer-content {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: nowrap;
+        padding: 15px;
+        margin-top: 25px;
+    }
+    .footer-content div {
+        width: calc(33% - 10px);
+        box-sizing: border-box;
+    }
+    .footer-right h4 {
+        margin-bottom: 20px;
+    }
+    .footer-right a {
+        margin-left: 18px;
+        margin-right: 0px;
+    }
+}
+
+/* ----------- FIN TABLET ----------------- */
+
+/* LAPTOP */
+@media screen and (min-width: 1024px) {
+    /* header */
+    .header-content div img {
+        margin-right: 50px;
+        width: 6%;
+    }
+    .header-content div input {
+        margin-right: 1%;
+        width: 70%;
+    }
+    .header-content div button {
+        padding: 15px;
+    }
+    /* nav-bar */
+    .nav-bar ul {
+        justify-content: center;
+    }
+    .nav-bar ul li {
+        padding: 15px;
+    }
+    /* footer */
+    .footer-content {
+        padding: 30px 0;
+    }
+}
+
+/* ----------- FIN LAPTOP ----------------- */
+
+/* DESKTOP */
+@media screen and (min-width: 1200px) {
+    /* header */
+    .header-content div img {
+        margin-right: 8%;
+        width: 4%;
+    }
+    .header-content div input {
+        margin-right: 1%;
+        width: 70%;
+    }
+    .header-content div button {
+        padding: 15px;
+    }
+    /* nav-bar */
+    .nav-bar ul li {
+        padding: 15px 35px;
+    }
+
+    /* btn-arriba */
+    .arriba {
+        display: block;
+        width: 60px;
+        height: 60px;
+        background-color: rgb(11 97 204);
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+        border-radius: 50%;
+        background-image: url(../img/flecha.png);
+        background-size: cover;
+        border: none;
+        opacity: 0.7;
+    }
+    .arriba:hover {
+        background-color: rgb(11 97 204);
+        background-image: url(../img/flecha.png);
+        background-size: cover;
+        opacity: 1;
+        border: none;
+    }
+    /*mapa de google*/
+    main figure iframe {
+        padding: 5px 0px;
+        border-radius: 20px;
+        opacity: 0.3;
+        width: 100%;
+        height: 600px;
+    }
+
+    main figure iframe:hover {
+        opacity: 1;
+        -webkit-box-shadow: 0px 66px 100px -20px rgba(0, 0, 0, 0.56);
+        -moz-box-shadow: 0px 66px 100px -20px rgba(0, 0, 0, 0.56);
+        box-shadow: 0px 66px 100px -20px rgba(0, 0, 0, 0.56);
+    }
+
+    /* contenedor padre-hijo imagenes */
+    .img-text-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .two-col {
+        width: calc(50% - 6em);
+        box-sizing: border-box;
+    }
+    .ocultar {
+        display: none;
+    }
+
+    /* mensaje error / success js */
+    .errorMessage {
+        color: red;
+        display: block;
+        margin-bottom: 11px;
+        font-weight: 600;
+    }
+
+    .errorInput {
+        padding: 15px;
+        margin: 10px 0px;
+        width: 100%;
+        border-radius: 25px;
+        background-color: white;
+        border: 2px solid red;
+    }
+
+    .boton-enviar input {
+        padding: 20px;
+        width: 100%;
+        border-radius: 20px;
+        border: 3px solid #40d12ef7;
+        background: none;
+        color: black;
+        font-weight: 500;
+        font-size: 1.3em;
+        cursor: pointer;
+        transition: background 1s, color 1s;
+    }
+    .boton-enviar input:hover {
+        background: #40d12ef7;
+        color: white;
+    }
+
+    .campos-obligatorios {
+        background-color: #fd0000;
+        text-align: center;
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 30px;
+        border-radius: 25px;
+    }
+    .campos-obligatorios p {
+        font-size: 1.2em;
+        font-weight: 500;
+        color: white;
+    }
 }
