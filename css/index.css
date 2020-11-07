@@ -2,10 +2,13 @@
 .slider-content {
     display: flex;
     justify-content: center;
-    margin-top: 50px;
     flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+
 }
 .slider-content img {
+    margin-top: 30px;
     width: 100%;
 }
 
@@ -70,6 +73,15 @@
     }
     .pastillas-img {
         width: 70%;
+    }
+    /* slider */
+    .slider-content{
+        margin-top: 50px;
+    }
+    .slider-content img {
+        margin-top: 50px;
+        width: 100%;
+        margin: auto;
     }
     /* Banner telefono */
     .banner-telefono div img {
