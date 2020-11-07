@@ -87,7 +87,7 @@ p {
 .nav-bar ul li {
     text-transform: uppercase;
     padding: 15px 0px;
-    text-align: center;
+    text-align: left;
     list-style: none;
 }
 .nav-bar ul li a {
@@ -113,10 +113,13 @@ p {
     font-size: 1.2em;
     padding: 10px;
 }
-.nav-bar-opciones {
-    display: block;
+.close-nav-bar{
+    position: absolute;
+    right: 0px;
+    padding: 10px;
+    color: white;
+    font-weight: 700;
 }
-
 /* footer */
 .footer-content {
     background: rgb(2 50 109);
