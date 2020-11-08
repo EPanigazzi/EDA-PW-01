@@ -23,7 +23,7 @@
     ></script>
 </head>
 <body>
-    <header id ="inicio" class="header-content">
+    <header id="inicio" class="header-content">
         <div>
             <img
                     src="./img/logo-blanco.png"
@@ -33,7 +33,6 @@
             <input
                 list="search"
                 placeholder="Ingrese la enfermedad..."
-                autofocus
                 autocomplete="off"
             />
             <datalist id="search">
@@ -85,7 +84,141 @@
                 tabindex="0"></iframe>
                 </a>
             </figure>
-        </section>    
+        </section>
+        <section class="lista-hospitales">
+            <h4>Hospitales con terapia intensiva</h4>
+            <hr>
+            <article class="img-text-content">
+                <div class="two-col">
+                    <ul>
+                        <li id="hospitalPosadas">Hospital Posadas</li>
+                        <li id="hospitalItaliano">Hospital Italiano</li>
+                    </ul>
+                </div>
+                <div class="two-col">
+                    <ul>
+                        <li id="hospitalMoron">Hospital de Mor&oacute;n</li>
+                        <li id="hospitalSantaMonica">Hospital Ram&oacute;n Carrillo</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+        <section id="content-popup" class="ocultar">
+            <article class="content-popup-hospitales">
+                <div class="popup-detalles" id="hospitalPosadasPopUp">
+                    <p class="cruz-cierre">X</p>
+                    <h4>Hospital Posadas</h4>
+                    <hr>
+                    <br>
+                    <!-- pop-up mobile -->
+                    <ul class="show-mobile">
+                        <li><strong>Direcci&oacute;n:</strong> Avenida Presidente Arturo U. Illia s/n y Marconi Morón 386
+                            <br>El Palomar, Provincia de Buenos Aires
+                        </li>
+                        <br>
+                        <li><strong>Tel&eacute;fono: </strong> 011 4469-9300</li>  
+                    </ul>
+                    <!-- pop-up desktop -->
+                    <div class="pop-detalle-responsive hidden-mobile">
+                        <div class="col-md-6">
+                            <img src="img/hospital-posadas.png" alt="foto de hospital posadas">
+                        </div>
+                        <ul class="col-md-6">
+                            <li>
+                                <strong>Direcci&oacute;n:</strong> Avenida Presidente Arturo U. Illia s/n y Marconi Morón 386
+                                <br> El Palomar, Provincia de Buenos Aires
+                                <br>
+                                <br> <strong>Tel&eacute;fono:</strong> 011 4469-9300
+                            </li>        
+                        </ul>
+                    </div>
+                </div>
+                <div class="popup-detalles" id="hospitalItalianoPopUp">
+                    <p class="cruz-cierre">X</p>
+                    <h4>Hospital Italiano</h4>
+                    <hr>
+                    <br>
+                    <!-- pop-up mobile -->
+                    <ul class="show-mobile">
+                        <li><strong>Direcci&oacute;n:</strong> Pres. Juan Domingo Perón 2231
+                            <br> San Justo, Provincia de Buenos Aires
+                        </li>
+                        <br>
+                        <li><strong>Tel&eacute;fono: </strong> 011 4959-0200</li>  
+                    </ul>
+                    <!-- pop-up desktop -->
+                    <div class="pop-detalle-responsive hidden-mobile">
+                        <div class="col-md-6">
+                            <img src="img/hospital-italiano.png" alt="foto de hospital italiano">
+                        </div>
+                        <ul class="col-md-6">
+                            <li>
+                                <strong>Direcci&oacute;n:</strong> Pres. Juan Domingo Perón 2231
+                                <br> San Justo, Provincia de Buenos Aires
+                                <br>
+                                <br> <strong>Tel&eacute;fono:</strong> 011 4959-0200
+                            </li>        
+                        </ul>
+                    </div>
+                </div>
+                <div class="popup-detalles" id="hospitalMoronPopUp">
+                    <p class="cruz-cierre">X</p>
+                    <h4>Hospital de Mor&oacute;n</h4>
+                    <hr>
+                    <br>
+                    <!-- pop-up mobile -->
+                    <ul class="show-mobile">
+                        <li><strong>Direcci&oacute;n:</strong> Dr. Rodolfo Monte 848
+                            <br>Mor&oacute;n, Provincia de Buenos Aires
+                        </li>
+                        <br>
+                        <li><strong>Tel&eacute;fono: </strong>  011 4133-4100</li>  
+                    </ul>
+                    <!-- pop-up desktop -->
+                    <div class="pop-detalle-responsive hidden-mobile">
+                        <div class="col-md-6">
+                            <img src="img/hospital-moron.png" alt="foto de hospital de moron">
+                        </div>
+                        <ul class="col-md-6">
+                            <li>
+                                <strong>Direcci&oacute;n:</strong> Dr. Rodolfo Monte 848
+                                <br> Mor&oacute;n, Provincia de Buenos Aires
+                                <br>
+                                <br> <strong>Tel&eacute;fono:</strong> 011 4133-4100
+                            </li>        
+                        </ul>
+                    </div>
+                </div>
+                <div class="popup-detalles" id="hospitalSantaMonicaPopUp">
+                    <p class="cruz-cierre">X</p>
+                    <h4>Hospital Ram&oacute;n Carrillo</h4>
+                    <hr>
+                    <br>
+                    <!-- pop-up mobile -->
+                    <ul class="show-mobile">
+                        <li><strong>Direcci&oacute;n:</strong>Hip&oacute;lito Yrigoyen 1650<br>
+                            Ciudadela, Provincia de Buenos Aires
+                        </li>
+                        <br>
+                        <li><strong>Tel&eacute;fono: </strong> 011 4653-1061</li>
+                    </ul>
+                    <!-- pop-up desktop -->
+                    <div class="pop-detalle-responsive hidden-mobile">
+                        <div class="col-md-6">
+                            <img src="img/hospital-ramon-castillo.png" alt="foto de hospital dr ramon carrillo">
+                        </div>
+                        <ul class="col-md-6">
+                            <li>
+                                <strong>Direcci&oacute;n:</strong> Hip&oacute;lito Yrigoyen 1650
+                                <br> Ciudadela, Provincia de Buenos Aires
+                                <br>
+                                <br> <strong>Tel&eacute;fono:</strong>  011 4653-1061
+                            </li>        
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </section>   
          <a href="#inicio" class="arriba"></a>
     </main>
     <footer>
@@ -124,5 +257,6 @@
         </div>
     </footer>
     <script src="js/main.js"></script>
+    <script src="js/mapa.js"></script>
 </body>
 </html>
