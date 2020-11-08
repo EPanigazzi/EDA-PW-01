@@ -157,6 +157,46 @@ p {
     color: white;
 }
 
+/* btn-arriba */
+.arriba {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: rgb(11 97 204);
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    border-radius: 50%;
+    background-image: url(../img/flecha.png);
+    background-size: cover;
+    border: none;
+    opacity: 0.7;
+}
+.arriba:hover {
+    background-color: rgb(11 97 204);
+    background-image: url(../img/flecha.png);
+    background-size: cover;
+    opacity: 1;
+    border: none;
+}
+
+/*mapa de google*/
+main figure iframe {
+    padding: 5px 0px;
+    border-radius: 20px;
+    opacity: 0.3;
+    width: 100%;
+    height: 500px;
+}
+
+main figure iframe:hover {
+    opacity: 1;
+    -webkit-box-shadow: 0px 66px 100px -20px rgba(0, 0, 0, 0.56);
+    -moz-box-shadow: 0px 66px 100px -20px rgba(0, 0, 0, 0.56);
+    box-shadow: 0px 66px 100px -20px rgba(0, 0, 0, 0.56);
+}
+
+
 /* TABLET */
 @media screen and (min-width: 768px) {
     /* header */
@@ -216,6 +256,16 @@ p {
         margin-left: 18px;
         margin-right: 0px;
     }
+    /* contenedor padre-hijo imagenes */
+    .img-text-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .two-col {
+        width: calc(50% - 6em);
+        box-sizing: border-box;
+    }
 }
 
 /* ----------- FIN TABLET ----------------- */
@@ -266,55 +316,6 @@ p {
     /* nav-bar */
     .nav-bar ul li {
         padding: 15px 35px;
-    }
-
-    /* btn-arriba */
-    .arriba {
-        display: block;
-        width: 60px;
-        height: 60px;
-        background-color: rgb(11 97 204);
-        position: fixed;
-        right: 10px;
-        bottom: 10px;
-        border-radius: 50%;
-        background-image: url(../img/flecha.png);
-        background-size: cover;
-        border: none;
-        opacity: 0.7;
-    }
-    .arriba:hover {
-        background-color: rgb(11 97 204);
-        background-image: url(../img/flecha.png);
-        background-size: cover;
-        opacity: 1;
-        border: none;
-    }
-    /*mapa de google*/
-    main figure iframe {
-        padding: 5px 0px;
-        border-radius: 20px;
-        opacity: 0.3;
-        width: 100%;
-        height: 600px;
-    }
-
-    main figure iframe:hover {
-        opacity: 1;
-        -webkit-box-shadow: 0px 66px 100px -20px rgba(0, 0, 0, 0.56);
-        -moz-box-shadow: 0px 66px 100px -20px rgba(0, 0, 0, 0.56);
-        box-shadow: 0px 66px 100px -20px rgba(0, 0, 0, 0.56);
-    }
-
-    /* contenedor padre-hijo imagenes */
-    .img-text-content {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-    }
-    .two-col {
-        width: calc(50% - 6em);
-        box-sizing: border-box;
     }
     .ocultar {
         display: none;
@@ -367,4 +368,5 @@ p {
         font-weight: 500;
         color: white;
     }
+    
 }
