@@ -29,7 +29,6 @@ $(document).ready(function () {
 
     if ($(window).width() > 425) {
         mostrarNavbarMayoresMobile();
-        $("#banner-telefono-responsive").attr("src", "img/banner-desktop.png");
     }
 
     $(".nav-bar-menu").click(function (e) {

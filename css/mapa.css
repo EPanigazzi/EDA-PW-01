@@ -73,6 +73,12 @@ section h2 {
 .cruz-cierre:hover {
     font-size: 1.4em;
 }
+.show-mobile{
+    display: block;
+}
+.hidden-mobile{
+    display: none;
+}
 
 /* TABLET */
 @media screen and (min-width: 768px) {
@@ -89,6 +95,12 @@ section h2 {
     .col-md-6 {
         width: calc(50% - 1em);
         box-sizing: border-box;
+    }
+    .show-mobile{
+        display: none;
+    }
+    .hidden-mobile{
+        display: flex;
     }
     /* lista de hospitales */
     .lista-hospitales ul {

@@ -5,7 +5,6 @@
     flex-wrap: wrap;
     width: 80%;
     margin: auto;
-
 }
 .slider-content img {
     margin-top: 30px;
@@ -53,7 +52,10 @@
 /* banner telefono */
 .banner-telefono div img {
     width: 100%;
-    margin-top: 50px;
+    margin: 50px 0;
+}
+#banner-telefono-desktop {
+    display: none;
 }
 
 /* TABLET */
@@ -75,7 +77,7 @@
         width: 70%;
     }
     /* slider */
-    .slider-content{
+    .slider-content {
         margin-top: 50px;
     }
     .slider-content img {
@@ -85,7 +87,13 @@
     }
     /* Banner telefono */
     .banner-telefono div img {
-        margin-bottom: 30px;
+        margin: 60px 0;
+    }
+    #banner-telefono-mobile {
+        display: none;
+    }
+    #banner-telefono-desktop {
+        display: block;
     }
 }
 
@@ -100,6 +108,10 @@
     /* pastillas */
     .pastillas-img {
         width: 60%;
+    }
+    /* Banner telefono */
+    .banner-telefono div img {
+        margin: 80px 0;
     }
 }
 
@@ -120,5 +132,9 @@
     }
     .pastillas-img {
         width: 50%;
+    }
+    /* Banner telefono */
+    .banner-telefono div img {
+        margin: 110px 0;
     }
 }

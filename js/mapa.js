@@ -8,6 +8,7 @@ $(document).ready(function () {
                 $("#content-popup").removeClass("ocultar");
                 ocultarTodosPopUps();
                 $(`#${idPopUpClickeado}PopUp`).fadeIn();
+                $(window).scrollTop(20);
             };
         }
     };
@@ -27,18 +28,6 @@ $(document).ready(function () {
         }
     };
 
-    const mostrarPopUpSegunResolucionPantalla = () => {
-        if($(window).width() <= 425){
-            $('.show-mobile').show();
-            $('.hidden-mobile').hide();
-        }
-        if($(window).width() > 425){
-            $('.hidden-mobile').show()
-            $('.show-mobile').hide();
-        }
-    }
-
     mostarPopUpSegunHospitalClickeado();
     cerrarPopUp();
-    mostrarPopUpSegunResolucionPantalla();
 });
