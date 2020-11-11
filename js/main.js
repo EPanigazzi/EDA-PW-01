@@ -1,9 +1,47 @@
 // Archivo JS donde guardamos las funciones comunes para los archivos JS
+$(document).ready(function () {
+    const opcionesNavbar = $(".nav-bar-li");
+    const iconoRallitasNavbar = $(".nav-bar-menu i");
+    const iconoCruzNavbar = $(".close-nav-bar");
 
-// VARIABLES GLOBALES
-const opcionesMenu = document.querySelectorAll(".nav-bar-li"); //lista de opciones nav-bar
-const iconoMenu = document.querySelector(".nav-bar-menu i"); // icono rallitas menu
-const bannerCovid = document.querySelector('aside div img');
+    const mostrarNavbar = () => {
+        for (i in opcionesNavbar) {
+            if (opcionesNavbar[i].className === "nav-bar-li ocultar") {
+                opcionesNavbar.removeClass("ocultar");
+                iconoRallitasNavbar.css("display", "none");
+                iconoCruzNavbar.removeClass("ocultar");
+            }
+        }
+    };
+    const ocultarNavbar = () => {
+        for (i in opcionesNavbar) {
+            if (opcionesNavbar[i].className === "nav-bar-li") {
+                opcionesNavbar.addClass("ocultar");
+                iconoRallitasNavbar.css("display", "block");
+                iconoCruzNavbar.addClass("ocultar");
+            }
+        }
+    };
+    const mostrarNavbarMayoresMobile = () => {
+        opcionesNavbar.removeClass("ocultar");
+        $(".nav-bar-menu").hide();
+    };
+
+    if ($(window).width() > 425) {
+        mostrarNavbarMayoresMobile();
+    }
+
+    $(".nav-bar-menu").click(function (e) {
+        if ($(window).width() <= 425) {
+            if (e.target.className === "fas fa-bars") {
+                mostrarNavbar();
+            }
+            if (e.target.className === "close-nav-bar") {
+                ocultarNavbar();
+            }
+        }
+    });
+});
 
 const validarNombreApellido = () => {
     const nombreApellido = document.querySelector("#nombre-apellido");
@@ -29,44 +67,3 @@ const vaciarCamposFormulario = () => {
         camposAVaciar[i].value = "";
     }
 };
-
-
-
-const mostrarOcultarMenu = () => {
-    for (i in opcionesMenu) {
-        if (opcionesMenu[i].className === "nav-bar-li ocultar") {
-            opcionesMenu[i].classList.add("nav-bar-opciones");
-            opcionesMenu[i].classList.remove("ocultar");
-        } else if (
-            opcionesMenu[i] &&
-            opcionesMenu[i].className === "nav-bar-li nav-bar-opciones"
-        ) {
-            opcionesMenu[i].classList.remove("nav-bar-opciones");
-            opcionesMenu[i].classList.add("ocultar");
-        }
-    }
-};
-
-// CAPTURO EL CLICK EN EL ICONO DEL MENU
-iconoMenu.onclick = () => {
-    if (screen.width >= 320 && screen.width <= 425) {
-        mostrarOcultarMenu();
-    }
-};
-
-
-if (screen.width > 425) {
-    // ocultar icono de navbar
-    for (i in opcionesMenu) {
-        if (
-            opcionesMenu[i].className === "nav-bar-li nav-bar-opciones" ||
-            opcionesMenu[i].className === "nav-bar-li ocultar"
-        ) {
-            opcionesMenu[i].classList.add("nav-bar-opciones");
-            opcionesMenu[i].classList.remove("ocultar");
-            document.querySelector(".nav-bar-menu").style.display = "none";
-        }
-    }
-    bannerCovid.src="img/banner-desktop.png";
-}
-
