@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAMEDIC - Calendario de Vacunaci&oacute;n</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/calendario.css">
+    <link rel="stylesheet" href="fullcalendar/core/main.min.css">
+    <link rel="stylesheet" href="fullcalendar/daygrid/main.min.css">
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+            integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+            crossorigin="anonymous"
+        />
+    <link
+            rel="icon"
+            href="img/logo-favicon.png"
+            type="image/png"
+            sizes="16x16"
+        />
+        <script src="js/jquery.min.js"></script>
+        <script src="fullcalendar/core/main.min.js"></script>
+        <script src="fullcalendar/daygrid/main.min.js"></script>
+        <script src="fullcalendar/core/locales-all.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/calendario.js"></script>
+</head>
+<body>
+    <header id="inicio" class="header-content">
+        <div>
+            <img
+                src="./img/logo-blanco.png"
+                alt="logo-web"
+                class="header-img"
+            />
+            <input
+                list="search"
+                placeholder="Ingrese la enfermedad..."
+                autofocus
+                autocomplete="off"
+            />
+            <datalist id="search">
+                <option value="Coronavirus"></option>
+                <option value="Resfriado com&uacute;n"></option>
+                <option value="Influenza"></option>
+                <option value="Sarampi&oacute;n"></option>
+                <option value="Varicela"></option>
+            </datalist>
+
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+    <nav class="nav-bar">
+        <ul>
+            <li class="nav-bar-menu">
+                <span class="close-nav-bar ocultar">X</span>
+                <i class="fas fa-bars"></i>
+            </li>
+            <li class="nav-bar-li ocultar">
+                <a href="/index.html">HOME</a>
+            </li>
+            <li class="nav-bar-li ocultar">
+                <a href="/listado-enfermedades.html">ENFERMEDADES</a>
+            </li>
+            <li class="nav-bar-li ocultar">
+                <a href="vacunas.html">VACUNACI&oacute;N</a>
+            </li>
+            <li class="nav-bar-li ocultar">
+                <a href="calendario.html">CALENDARIO</a>
+            </li>
+            <li class="nav-bar-li ocultar">
+                <a href="/mapa.html">HOSPITALES</a>
+            </li>
+            <li class="nav-bar-li ocultar">
+                <a href="/contacto.html">CONTACTO</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <div class="titulo-principal">
+            <h2>Calendario de Vacunaci&oacute;n</h2>
+        </div>
+        <div id="calendario">
+
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <h5 class="footer-title">Datos del Grupo</h5>
+                <p>Ezequiel Panigazzi - 38.695.636</p>
+                <p>Lucas Zacarias - 42.436.419</p>
+                <p>Julian Castro - 39.347.169</p>
+            </div>
+            <div class="footer-center">
+                <h5 class="footer-title">Nombre inferior</h5>
+                <ul>
+                    <li>
+                        <a href="listado-enfermedades.html">Enfermedades</a>
+                    </li>
+                    <li><a href="vacunas.html">Vacunas</a></li>
+                    <li>
+                        <a href="mapa.html">Hospitales</a>
+                    </li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <h5 class="footer-title">Redes Sociales</h5>
+                <a href="https://www.facebook.com/" target="_blank"
+                    ><i class="fab fa-facebook"></i
+                ></a>
+                <a href="https://www.instagram.com/" target="_blank"
+                    ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="https://www.twitter.com/" target="_blank"
+                    ><i class="fab fa-twitter"></i
+                ></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
