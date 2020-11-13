@@ -8,14 +8,29 @@ main{
     margin: 2em 0;
 }
 
-.fechas{
-    background-color: yellow !important;
-    border-radius: 1em !important;
-}
 
 /*AJUSTES VISUALES DEL CALENDARIO DE VACUNAS*/
 div .fc-head{
     background-color: rgb(181, 207, 240);
 }
 
+.fechas-abril{
+    background-color: rgb(21, 92, 97) !important;
+    border-radius: 0.5em !important;
+    border-width: 0em !important;
+}
+
+.fechas-junio{
+    background-color: rgb(180, 180, 24) !important;
+    border-radius: 0.5em !important;
+    border-width: 0em !important;
+}
+
+.fechas-septiembre-octubre{
+    background-color: rgb(172, 104, 27) !important;
+    border-radius: 0.5em !important;
+    border-width: 0em !important;
+}
+
+/*FIN DE AJUSTE VISUALES DEL CALENDARIO DE VACUNAS*/
 
