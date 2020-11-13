@@ -1,0 +1,21 @@
+main{
+    width: 80%;
+    margin: auto;
+}
+
+.titulo-principal{
+    text-align: center;
+    margin: 2em 0;
+}
+
+.fechas{
+    background-color: yellow !important;
+    border-radius: 1em !important;
+}
+
+/*AJUSTES VISUALES DEL CALENDARIO DE VACUNAS*/
+div .fc-head{
+    background-color: rgb(181, 207, 240);
+}
+
+
