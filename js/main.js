@@ -4,43 +4,57 @@ $(document).ready(function () {
     const iconoRallitasNavbar = $(".nav-bar-menu i");
     const iconoCruzNavbar = $(".close-nav-bar");
 
-    const mostrarNavbar = () => {
-        for (i in opcionesNavbar) {
-            if (opcionesNavbar[i].className === "nav-bar-li ocultar") {
-                opcionesNavbar.removeClass("ocultar");
-                iconoRallitasNavbar.css("display", "none");
-                iconoCruzNavbar.removeClass("ocultar");
-            }
-        }
+    const mostrarOpcionesMenuNavbar = () => {
+        opcionesNavbar.show();
+        iconoCruzNavbar.show();
     };
-    const ocultarNavbar = () => {
-        for (i in opcionesNavbar) {
-            if (opcionesNavbar[i].className === "nav-bar-li") {
-                opcionesNavbar.addClass("ocultar");
-                iconoRallitasNavbar.css("display", "block");
-                iconoCruzNavbar.addClass("ocultar");
-            }
-        }
-    };
-    const mostrarNavbarMayoresMobile = () => {
-        opcionesNavbar.removeClass("ocultar");
-        $(".nav-bar-menu").hide();
+    const ocultarOpcionesMenuNavbar = () => {
+        opcionesNavbar.hide();
+        iconoCruzNavbar.hide();
     };
 
-    if ($(window).width() > 425) {
-        mostrarNavbarMayoresMobile();
-    }
-
-    $(".nav-bar-menu").click(function (e) {
-        if ($(window).width() <= 425) {
+    const clickNavbar = () => {
+        $(".nav-bar-menu").click(function (e) {
             if (e.target.className === "fas fa-bars") {
-                mostrarNavbar();
+                mostrarOpcionesMenuNavbar();
             }
             if (e.target.className === "close-nav-bar") {
-                ocultarNavbar();
+                ocultarOpcionesMenuNavbar();
             }
+        });
+    };
+
+    const navbarDispositivosMayoresMobile = () => {
+        iconoCruzNavbar.hide();
+        iconoRallitasNavbar.hide();
+        opcionesNavbar.show();
+    };
+
+    const navbarDispositivosMobile = () => {
+        opcionesNavbar.hide();
+        iconoCruzNavbar.hide();
+        iconoRallitasNavbar.show();
+    }
+
+    // Lo hicimos para que reconozca el tamaño de la pantalla ni bien ingresa el usuario
+    const navbarSegunAnchoPantalla = () => {
+        if ($(window).width() < 768) {
+            navbarDispositivosMobile();
+            clickNavbar();
+        } else {
+            navbarDispositivosMayoresMobile();
         }
-    });
+    };
+
+    // Reconoce el tamaño de pantalla de manera responsive
+    const navbarConCambiosResolucionPantalla = () => {
+        $(window).resize(function () {
+            navbarSegunAnchoPantalla();
+        });
+    };
+
+    navbarSegunAnchoPantalla();
+    navbarConCambiosResolucionPantalla();
 });
 
 const validarNombreApellido = () => {
