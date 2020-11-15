@@ -8,6 +8,8 @@ Luego incluirle interacción con el usario por medio de JavaScript y Jquery.
 <br/>
 Y por último hacerla responsive.
 
+Podes verlo entrando a https://eda-pw1.vercel.app/
+
 <br/>
 
 ## Autores ✒️
