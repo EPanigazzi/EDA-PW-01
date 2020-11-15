@@ -25,15 +25,14 @@ $(document).ready(function () {
     };
 
     const navbarDispositivosMayoresMobile = () => {
-        iconoCruzNavbar.hide();
-        iconoRallitasNavbar.hide();
+        $('.nav-bar-menu').hide();
         opcionesNavbar.show();
     };
 
     const navbarDispositivosMobile = () => {
         opcionesNavbar.hide();
         iconoCruzNavbar.hide();
-        iconoRallitasNavbar.show();
+        $('.nav-bar-menu').show();
     }
 
     // Lo hicimos para que reconozca el tamaño de la pantalla ni bien ingresa el usuario

@@ -7,7 +7,6 @@
     margin: auto;
 }
 .slider-content img {
-    margin-top: 30px;
     width: 100%;
 }
 
@@ -28,7 +27,8 @@
     text-align: center;
 }
 .pastillas-img {
-    width: 50%;
+    margin-top: 15%;
+    max-width: 50%;
     cursor: pointer;
 }
 .pastillas-link-content {
@@ -66,12 +66,12 @@
     }
     .pastillas-content {
         display: flex;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         justify-content: center;
     }
     .pastillas-content article {
         text-align: center;
-        width: calc(33% - 10px);
+        width: calc(50% - 10px);
     }
     .pastillas-img {
         width: 70%;
@@ -79,11 +79,6 @@
     /* slider */
     .slider-content {
         margin-top: 50px;
-    }
-    .slider-content img {
-        margin-top: 50px;
-        width: 100%;
-        margin: auto;
     }
     /* Banner telefono */
     .banner-telefono div img {
@@ -101,13 +96,15 @@
 
 /* LAPTOP */
 @media screen and (min-width: 1024px) {
-    /* slider principal  */
-    .slider-content img {
-        width: 80%;
-    }
     /* pastillas */
     .pastillas-img {
         width: 60%;
+    }
+    .pastillas-content {
+        flex-wrap: nowrap;
+    }
+    .pastillas-content article {
+        width: calc(25% - 10px);
     }
     /* Banner telefono */
     .banner-telefono div img {
@@ -119,9 +116,9 @@
 
 /* DESKTOP */
 @media screen and (min-width: 1200px) {
-    /* slider principal */
     .slider-content img {
-        width: 70%;
+        width: 50%;
+        margin: auto;
     }
     /* pastillas */
     .pastilla-title h1 {
@@ -131,7 +128,7 @@
         font-size: 2em;
     }
     .pastillas-img {
-        width: 50%;
+        max-width: 55%;
     }
     /* Banner telefono */
     .banner-telefono div img {
